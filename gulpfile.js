@@ -1,171 +1,150 @@
-const {src, dest, parallel, series, watch} = require('gulp');
+// VARIABLES & PATHS
+
+let preprocessor = 'sass', // Preprocessor (sass, scss, less, styl)
+		fileswatch   = 'html,htm,txt,json,md,woff2', // List of files extensions for watching & hard reload (comma separated)
+		imageswatch  = 'jpg,jpeg,png,webp,svg', // List of images extensions for watching & compression (comma separated)
+		baseDir      = 'app', // Base directory path without «/» at the end
+		online       = true; // If «false» - Browsersync will work offline without internet connection
+
+let paths = {
+
+	plugins: {
+		src: [
+			// 'node_modules/jquery/dist/jquery.min.js', // npm vendor example (npm i --save-dev jquery)
+		]
+	},
+
+	userscripts: {
+		src: [
+			baseDir + '/js/app.js' // app.js. Always at the end
+		]
+	},
+
+	styles: {
+		src:  baseDir + '/' + preprocessor + '/main.*',
+		dest: baseDir + '/css',
+	},
+
+	images: {
+		src:  baseDir + '/images/src/**/*',
+		dest: baseDir + '/images/dest',
+	},
+
+	deploy: {
+		hostname:    'username@yousite.com', // Deploy hostname
+		destination: 'yousite/public_html/', // Deploy destination
+		include:     [/* '*.htaccess' */], // Included files to deploy
+		exclude:     [ '**/Thumbs.db', '**/*.DS_Store' ], // Excluded files from deploy
+	},
+
+	cssOutputName: 'app.min.css',
+	jsOutputName:  'app.min.js',
+
+}
+
+// LOGIC
+
+const { src, dest, parallel, series, watch } = require('gulp');
+const sass         = require('gulp-sass');
+const scss         = require('gulp-sass');
+const less         = require('gulp-less');
+const styl         = require('gulp-stylus');
+const cleancss     = require('gulp-clean-css');
+const concat       = require('gulp-concat');
+const browserSync  = require('browser-sync').create();
+const babel        = require('gulp-babel');
+const uglify       = require('gulp-uglify');
 const autoprefixer = require('gulp-autoprefixer');
-const cleanCSS = require('gulp-clean-css');
-const uglify = require('gulp-uglify-es').default;
-const del = require('del');
-const browserSync = require('browser-sync').create();
-const sass = require('gulp-sass');
-const svgSprite = require('gulp-svg-sprite');
-const fileInclude = require('gulp-file-include');
-const sourcemaps = require('gulp-sourcemaps');
-const rev = require('gulp-rev');
-const revRewrite = require('gulp-rev-rewrite');
-const revDel = require('gulp-rev-delete-original');
-const htmlmin = require('gulp-htmlmin');
-const gulpif = require('gulp-if');
-const notify = require('gulp-notify');
-const image = require('gulp-image');
-const { readFileSync } = require('fs');
-const concat = require('gulp-concat');
+const imagemin     = require('gulp-imagemin');
+const newer        = require('gulp-newer');
+const rsync        = require('gulp-rsync');
+const del          = require('del');
 
-let isProd = false; // dev by default
-
-const clean = () => {
-	return del(['app/*'])
+function browsersync() {
+	browserSync.init({
+		server: { baseDir: baseDir + '/' },
+		notify: false,
+		online: online
+	})
 }
 
-//svg sprite
-const svgSprites = () => {
-  return src('./src/img/svg/**.svg')
-    .pipe(svgSprite({
-      mode: {
-        stack: {
-          sprite: "../sprite.svg" //sprite file name
-        }
-      },
-    }))
-    .pipe(dest('./app/img'));
+function plugins() {
+	if (paths.plugins.src != '') {
+		return src(paths.plugins.src)
+		.pipe(concat('plugins.tmp.js'))
+		.pipe(dest(baseDir + '/js/_tmp'))
+	} else {
+		async function createFile() {
+			require('fs').writeFileSync(baseDir + '/js/_tmp/plugins.tmp.js', '');
+		}; return createFile();
+	}
 }
 
-const styles = () => {
-  return src('./src/scss/**/*.scss')
-    .pipe(gulpif(!isProd, sourcemaps.init()))
-    .pipe(sass().on("error", notify.onError()))
-    .pipe(autoprefixer({
-      cascade: false,
-    }))
-    .pipe(gulpif(isProd, cleanCSS({ level: 2 })))
-    .pipe(gulpif(!isProd, sourcemaps.write('.')))
-    .pipe(dest('./app/css/'))
-    .pipe(browserSync.stream());
-};
-
-const stylesBackend = () => {
-	return src('./src/scss/**/*.scss')
-		.pipe(sass().on("error", notify.onError()))
-    .pipe(autoprefixer({
-      cascade: false,
-		}))
-		.pipe(dest('./app/css/'))
-};
-
-const scripts = () => {
-	src('./src/js/vendor/**.js')
-		.pipe(concat('vendor.js'))
-		.pipe(gulpif(isProd, uglify().on("error", notify.onError())))
-		.pipe(dest('./app/js/'))
-  return src(
-    ['./src/js/functions/**.js', './src/js/components/**.js', './src/js/main.js'])
-    .pipe(gulpif(!isProd, sourcemaps.init()))
-    .pipe(concat('main.js'))
-    .pipe(gulpif(isProd, uglify().on("error", notify.onError())))
-    .pipe(gulpif(!isProd, sourcemaps.write('.')))
-    .pipe(dest('./app/js'))
-    .pipe(browserSync.stream());
+function userscripts() {
+	return src(paths.userscripts.src)
+	.pipe(babel({ presets: ['@babel/env'] }))
+	.pipe(concat('userscripts.tmp.js'))
+	.pipe(dest(baseDir + '/js/_tmp'))
 }
 
-const scriptsBackend = () => {
-	src('./src/js/vendor/**.js')
-    .pipe(concat('vendor.js'))
-    .pipe(gulpif(isProd, uglify().on("error", notify.onError())))
-		.pipe(dest('./app/js/'))
-	return src(['./src/js/functions/**.js', './src/js/components/**.js', './src/js/main.js'])
-    .pipe(dest('./app/js'))
-};
-
-const resources = () => {
-  return src('./src/resources/**')
-    .pipe(dest('./app'))
+function scripts() {
+	return src([
+		baseDir + '/js/_tmp/plugins.tmp.js',
+		baseDir + '/js/_tmp/userscripts.tmp.js'
+	])
+	.pipe(concat(paths.jsOutputName))
+	.pipe(uglify())
+	.pipe(dest(baseDir + '/js'))
 }
 
-const images = () => {
-  return src([
-		'./src/img/**.jpg',
-		'./src/img/**.png',
-		'./src/img/**.jpeg',
-		'./src/img/*.svg',
-		'./src/img/**/*.jpg',
-		'./src/img/**/*.png',
-		'./src/img/**/*.jpeg'
-		])
-    .pipe(gulpif(isProd, image()))
-    .pipe(dest('./app/img'))
-};
-
-const htmlInclude = () => {
-  return src(['./src/*.html'])
-    .pipe(fileInclude({
-      prefix: '@',
-      basepath: '@file'
-    }))
-    .pipe(dest('./app'))
-    .pipe(browserSync.stream());
+function styles() {
+	return src(paths.styles.src)
+	.pipe(eval(preprocessor)())
+	.pipe(concat(paths.cssOutputName))
+	.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
+	.pipe(cleancss({ level: { 1: { specialComments: 0 } },/* format: 'beautify' */ }))
+	.pipe(dest(paths.styles.dest))
+	.pipe(browserSync.stream())
 }
 
-const watchFiles = () => {
-  browserSync.init({
-    server: {
-      baseDir: "./app"
-    },
-  });
-
-  watch('./src/scss/**/*.scss', styles);
-  watch('./src/js/**/*.js', scripts);
-  watch('./src/partials/*.html', htmlInclude);
-  watch('./src/*.html', htmlInclude);
-  watch('./src/resources/**', resources);
-  watch('./src/img/*.{jpg,jpeg,png,svg}', images);
-	watch('./src/img/**/*.{jpg,jpeg,png}', images);
-  watch('./src/img/svg/**.svg', svgSprites);
+function images() {
+	return src(paths.images.src)
+	.pipe(newer(paths.images.dest))
+	.pipe(imagemin())
+	.pipe(dest(paths.images.dest))
 }
 
-const cache = () => {
-  return src('app/**/*.{css,js,svg,png,jpg,jpeg,woff2}', {
-    base: 'app'})
-    .pipe(rev())
-    .pipe(dest('app'))
-    .pipe(revDel())
-    .pipe(rev.manifest('rev.json'))
-    .pipe(dest('app'));
-};
-
-const rewrite = () => {
-  const manifest = readFileSync('app/rev.json');
-
-  return src('app/**/*.html')
-    .pipe(revRewrite({
-      manifest
-    }))
-    .pipe(dest('app'));
+function cleanimg() {
+	return del('' + paths.images.dest + '/**/*', { force: true })
 }
 
-const htmlMinify = () => {
-	return src('app/**/*.html')
-		.pipe(htmlmin({
-			collapseWhitespace: true
-		}))
-		.pipe(dest('app'));
+function deploy() {
+	return src(baseDir + '/')
+	.pipe(rsync({
+		root: baseDir + '/',
+		hostname: paths.deploy.hostname,
+		destination: paths.deploy.destination,
+		include: paths.deploy.include,
+		exclude: paths.deploy.exclude,
+		recursive: true,
+		archive: true,
+		silent: false,
+		compress: true
+	}))
 }
 
-const toProd = (done) => {
-  isProd = true;
-  done();
-};
+function startwatch() {
+	watch(baseDir  + '/' + preprocessor + '/**/*', {usePolling: true}, styles);
+	watch(baseDir  + '/images/src/**/*.{' + imageswatch + '}', {usePolling: true}, images);
+	watch(baseDir  + '/**/*.{' + fileswatch + '}', {usePolling: true}).on('change', browserSync.reload);
+	watch([baseDir + '/js/**/*.js', '!' + baseDir + '/js/**/*.min.js', '!' + baseDir + '/js/**/*.tmp.js'], {usePolling: true}, series(plugins, userscripts, scripts)).on('change', browserSync.reload);
+}
 
-exports.default = series(clean, htmlInclude, scripts, styles, resources, images, svgSprites, watchFiles);
-
-exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images, svgSprites, htmlMinify);
-
-exports.cache = series(cache, rewrite);
-
-exports.backend = series(toProd, clean, htmlInclude, scriptsBackend, stylesBackend, resources, images, svgSprites);
+exports.browsersync = browsersync;
+exports.scripts     = series(plugins, userscripts, scripts);
+exports.assets      = series(cleanimg, styles, plugins, userscripts, scripts, images);
+exports.styles      = styles;
+exports.images      = images;
+exports.cleanimg    = cleanimg;
+exports.deploy      = deploy;
+exports.default     = series(plugins, userscripts, scripts, images, styles, parallel(browsersync, startwatch));
