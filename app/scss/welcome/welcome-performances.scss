@@ -1,0 +1,115 @@
+.welcome-performances {
+    padding: 106px 0 97px 0;
+    .section__header {
+        margin: 0 0 48px 0;
+    }
+    &__card {
+        position: relative;
+        max-height: 448px;
+        margin: 0 0 30px 0;
+        transition: all .3s ease-in-out;
+        .age-limit {
+            position: absolute;
+            right: 0;
+            top: 0;
+            color: #ba551d;
+            background-color: #fed071;
+            z-index: 2;
+        }
+        .btn__outline {
+            max-width: 208px;
+        }
+        &:hover {
+            .welcome-performances__content {
+                justify-content: flex-end;
+                left: 0;
+                background-color: rgba(255, 255, 255, .8);
+                padding: 32px 25px 42px 39px;
+                transition: all .3s ease-in-out;
+            }
+            .welcome-performances__background img {
+                filter: opacity(1);
+                transition: all .3s ease-in-out;
+            }
+            .welcome-performances__text {
+                display: none;
+                transition: all .25s ease-in-out;
+            }
+        }
+    }
+    &__background {
+        max-height: 448px;
+        overflow: hidden;
+        border-radius: 24px;
+        img {
+            position: relative;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            filter: opacity(0.2);
+        }
+    }
+    &__content {
+        position: absolute;
+        top: 0;
+        left: 9px;
+        right: 0;
+        border: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        background-color: rgb(255, 255, 255);
+        padding: 32px 25px 42px 30px;
+        border-radius: 24px;
+        box-shadow: 0px 16px 48px 0px rgba(195, 195, 195, 0.24);
+        transition: all .3s ease-in-out;
+        .card__title {
+            margin: 0 0 23px 0;
+            transition: all .3s ease-in-out;
+        }
+    }
+    &__date {
+        max-width: 248px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 900;
+        font-size: 15px;
+        line-height: 32px;
+        color: #6d777e;
+        background-color: #f0f4f7;
+        border: 1px solid #f0f4f7;
+        border-radius: 20px;
+        margin: 0 0 22px;
+        transition: all .25s ease-in-out;
+    }
+    &__time {
+        padding: 0 0 0 14px;
+    }
+    &__start {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 3px 26px;
+        background-color: #fff;
+        border-radius: 20px;
+    }
+    &__text {
+        font-size: 14px;
+        line-height: 24px;
+        color: #272827;
+        overflow: hidden; /* Дополнительно включаем для подстраховки */
+        display: -webkit-box; /* Задаем блочный элемент */
+        -webkit-box-orient: vertical; /* Сопутствующий класс */
+        -webkit-line-clamp: 5; /* Кол-во строк */
+        margin: 0 0 49px 0;
+        transition: all .3s ease-in-out;
+    }
+    .btn__outline {
+        &:hover {
+            color: #fff;
+            background-color: #3f593a;
+            transition: all .25s ease-in-out;
+        }
+    }
+}

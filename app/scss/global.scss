@@ -43,14 +43,15 @@
 } 
 .btn {
     cursor: pointer;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: FranxurterTotallyFat;
     font-size: 18px;
     line-height: 28px;
-    padding: 14px 50px 14px 50px;
-    border: none;
+    padding: 12px 12px 12px 12px;
+    border: 2px solid transparent;
     border-radius: 28px;
     text-transform: uppercase;
     transition: all .3s ease-in-out;
@@ -58,7 +59,12 @@
         transition: all .3s ease-in-out;
     }
     &__primary {
-
+        max-width: 300px;
+        transition: all .25s ease-in-out;
+    }
+    &__outline {
+        border: 2px solid #3f593a;
+        transition: all .25s ease-in-out;
     }
 }
 
@@ -73,4 +79,41 @@
     height: 48px;
     border-radius: 50%;
     letter-spacing: 2px;
+}
+
+.section {
+    &__header {
+        display: flex;
+        align-items: center;
+    }
+    &__title {
+        font-family: FranxurterTotallyFat;
+        font-size: 48px;
+        line-height: 64px;
+        margin: 0 32px 0 0;
+    }
+    &__more {
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 22px;
+        letter-spacing: 0.06em;
+        color: #344d2f;
+        padding: 4px 30px 6px 30px;
+        border-radius: 16px;
+        background-color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all .3s ease-in-out;
+        &:hover {
+            transition: all .3s ease-in-out;
+        }
+    }
+}
+
+.card {
+    &__title {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+    }
 }

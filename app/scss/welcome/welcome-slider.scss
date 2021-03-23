@@ -1,5 +1,5 @@
 .welcome-slider-container {
-    height: 750px;
+    height: 752px;
     padding: 0;
     .swiper-button-next:after,
     .swiper-button-prev:after{
@@ -95,6 +95,7 @@
         margin: 0 0 31px 0;
     }
     .btn {
+        max-width: 225px;
         color: #ba551d;
         background-color: #ffd479;
         &:hover {
