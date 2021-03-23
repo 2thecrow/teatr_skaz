@@ -42,7 +42,35 @@
     margin: 0 auto;
 } 
 .btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: FranxurterTotallyFat;
+    font-size: 18px;
+    line-height: 28px;
+    padding: 14px 50px 14px 50px;
+    border: none;
+    border-radius: 28px;
+    text-transform: uppercase;
+    transition: all .3s ease-in-out;
+    &:hover {
+        transition: all .3s ease-in-out;
+    }
     &__primary {
 
     }
+}
+
+.age-limit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: FranxurterTotallyFat;
+    font-size: 24px;
+    line-height: 26px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    letter-spacing: 2px;
 }
