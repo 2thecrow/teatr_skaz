@@ -33,11 +33,16 @@
 }
 .t-wrapper {
     position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+} 
+.t-container {
+    position: relative;
     max-width: 1440px;
     margin: 0 auto;
 } 
 .btn {
     &__primary {
-        
+
     }
 }
