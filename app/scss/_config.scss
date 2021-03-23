@@ -1,21 +1,21 @@
 // USER VARIABLES SECTION
 
-$accent: orange; // Accent Color
+$accent: #638b5c; // Accent Color
 $fontsize: 16px; // Body Font Size
-$textcolor: #333; // Text Color
+$textcolor: #344d2f; // Text Color
 $lineheight: 1.65; // Document Line Height
-$userfont: Roboto, sans-serif; // User Font Family
-$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+$userfont: Roboto, -apple-system, BlinkMacSystemFont, sans-serif, Arial; // User Font Family
 
 // Bootstrap compatible gutter variable => $gutter
 $grid-gutter-width: 30px;
 $gutter: $grid-gutter-width;
+$container-max-widths: ( sm: 660px,md: 840px,lg: 1080px,xl: 1260px,xxl: 1440px);
 
 // IMPORT SECTION
 
 @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'; // Bootstrap Reboot collection
-@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'; // Bootstrap Breakpoints mixin
-// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss'; // Optional Bootstrap Grid
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss'; // Optional Bootstrap Grid
+//@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'; // Bootstrap Breakpoints mixin
 // @import 'node_modules/bootstrap/scss/utilities/_sizing.scss'; // Optional Bootstrap Utilites
 
 // FONTS LOAD SECTION
@@ -30,10 +30,12 @@ $gutter: $grid-gutter-width;
 	}
 }
 
-@include font('Roboto', normal, 400, '../fonts/roboto-regular-webfont.woff2');
-@include font('Roboto', italic, 400, '../fonts/roboto-italic-webfont.woff2');
-@include font('Roboto', normal, 700, '../fonts/roboto-bold-webfont.woff2');
-@include font('Roboto', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2');
+@include font('FranxurterTotallyFat', normal, 400, '../fonts/franxurtertotallyfat.ttf');
+@include font('Roboto', normal, 400, '../fonts/roboto-regular.woff2');
+@include font('Roboto', normal, 700, '../fonts/roboto-700.woff2');
+@include font('Roboto', normal, 900, '../fonts/roboto-900.woff2');
+/* @include font('Roboto', italic, 400, '../fonts/roboto-italic-webfont.woff2'); */
+/* @include font('Roboto', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2'); */
 
 // GENERAL DOCUMENT STYLES
 
@@ -57,7 +59,7 @@ body {
 	font-size: $fontsize;
 	line-height: $lineheight;
 	color: $textcolor;
-	min-width: 320px;
+	background: #f8fafb;
 	position: relative;
 	overflow-x: hidden;
 }

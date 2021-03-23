@@ -1,4 +1,21 @@
 "use strict";
 
-document.addEventListener('DOMContentLoaded', function () {// Custom JS
+document.addEventListener('DOMContentLoaded', function () {
+  var swiper = new Swiper('.welcome-slider-container', {
+    // Optional parameters
+    loop: true,
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination'
+    },
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar'
+    }
+  });
 });

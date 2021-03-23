@@ -1,0 +1,34 @@
+.buy-ticket {
+    cursor: pointer;
+    transition: all .15s ease-out;
+    &__border {
+        background-color: #fff;
+        padding: 8px;
+        border-radius: 40px;
+        box-shadow: 15.427px 18.385px 24px 0px rgba(181, 194, 205, 0.4),
+                    -21.925px -9.762px 24px 0px rgba(255, 255, 255, 0.004),
+                    inset 0px 2px 16px 0px rgba(222, 232, 238, 0.004);
+    }
+    &__inner {
+        img {
+            margin: 0 10px 0 0;
+        }
+        font-family: FranxurterTotallyFat;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        color: #fff;
+        letter-spacing: 0.025em;
+        background-image: linear-gradient( 90deg, #355030 0%, #417836 100%);
+        padding: 18px 40px 18px 40px;
+        border-radius: 32px;
+        text-transform: uppercase;
+    }
+    &:hover {
+        .buy-ticket__border {
+            background-color: #ccd3cb;
+            transition: all .15s ease-out;
+        }
+    }
+}
+  

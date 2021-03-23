@@ -1,0 +1,141 @@
+.header {
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__menu {
+        display: flex;
+        background-color: #fff;
+        border-radius: 32px;
+        padding: 8px;
+    }
+}
+
+.header-nav {
+    &__logo {
+        display: flex;
+        align-items: center;
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 26px;
+        color: #344d2f;
+        text-decoration: none;
+        transition: all .25s ease-out;
+        img {
+            margin: -9px 25px 0 0;
+            padding: 0 0 0 5px;
+        }
+        p {
+            max-width: 200px;
+            margin: 0;
+        }
+        &:hover {
+            color: #2f452a;
+            transition: all .25s ease-out;
+        }
+    }
+}
+
+.header-list {
+    display: flex;
+    align-items: center;
+    font-family: Roboto;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 20px;
+        color: #272827;
+        &:not(:last-child) {
+            margin: 0 93px 0 0;
+        }
+    }
+    &__item--address .header-list__link {
+        background-image: url(/img/dest/header/map-icon__header.png);
+        padding: 0 0 0 16px;
+    }
+    &__item--phone .header-list__link{
+        background-image: url(/img/dest/header/phone-icon__header.png);
+        padding: 0 0 0 22px;
+    }
+    a {
+        color: #272827;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__link {
+        cursor: pointer;
+        display: inline-flex;
+        position: relative;
+        font-weight: 900;
+        font-size: 14px;
+        line-height: 28px;
+        background-repeat: no-repeat;
+        background-position: left;
+        text-align: right;
+        color: #344d2f;
+        span {
+            position: relative;
+            
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 6px;
+                left: 0;
+                width: 100%;
+                border-bottom: 1px dotted #385033;
+                transition: all 0.15s ease-out;
+            }
+        }
+        &:hover {
+            span {
+                color: #2f452a;
+                &::before {
+                    bottom: 4px;
+                    border-bottom: 1px dotted #32482e;
+                    transition: all 0.15s ease-out;
+                }
+            }
+        }
+        
+    }
+}
+
+.view-switch {
+    display: flex;
+    justify-content: flex-end;
+    &__btn {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        max-width: 256px;
+        width: 100%;
+        height: 80px;
+        background-color: #fff;
+        padding: 0 0 15px 0;
+        margin: -40px 0 0 0;
+        border-radius: 40px;
+        transition: all .25s ease-out;
+        &:hover {
+            background-color: #ccd3cb;
+            transition: all .25s ease-out;
+        }
+    }
+    &__link {
+        font-weight: 900;
+        font-size: 14px;
+        line-height: 20px;
+        background-image: url(/img/dest/header/pooreye-icon__header.png);
+        background-repeat: no-repeat;
+        background-position: left;
+        padding: 0 0 0 23px;
+    }
+}
