@@ -1,4 +1,34 @@
 .welcome-slider-container {
     height: 750px;
-    background-image: url(/img/dest/test_layout/welcome-slider-slide.png);
+    padding: 0;
+}
+
+.welcome-slide {
+    &__image {
+        
+    }
+    &__img {
+        
+    }
+    &__content {
+        
+    }
+    &__title {
+        
+    }
+    &__date {
+        
+    }
+    &__time {
+        
+    }
+    &__start {
+        
+    }
+    &__age {
+        
+    }
+    &__text {
+        
+    }
 }

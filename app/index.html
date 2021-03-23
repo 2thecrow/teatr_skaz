@@ -17,7 +17,7 @@
 <body>
 
 	<div class="header">
-		<div class="container">
+		<div class="container-fluid t-wrapper">
 			<div class="row">
 				<div class="col-12">
 					<div class="view-switch">
@@ -63,14 +63,61 @@
 			</div>
 			<div class="row">
 				<div class="col">
-					<div class="header__menu">
-						<ul>
-							<li>
-
+					<div class="main-menu">
+						<ul class="main-menu__list">
+							<li class="main-menu__item main-menu__dropdown">
+								<a class="main-menu__link" href="/">О театре</a>
+								<div class="main-menu__dropdown-content dropdown-content">
+									<ul class="dropdown-content__list">
+										<li class="dropdown-content__item">
+											<a class="dropdown-content__link" href="/">История</a>
+										</li>
+										<li class="dropdown-content__item">
+											<a class="dropdown-content__link" href="/">Актеры</a>
+										</li>
+										<li class="dropdown-content__item">
+											<a class="dropdown-content__link" href="/">Вакансии</a>
+										</li>
+										<li class="dropdown-content__item">
+											<a class="dropdown-content__link" href="/">Документы</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="main-menu__item">
+								<a class="main-menu__link" href="/">Блог</a>
+							</li>
+							<li class="main-menu__item">
+								<a class="main-menu__link" href="/">Афиша</a>
+							</li>
+							<li class="main-menu__item main-menu__dropdown">
+								<a class="main-menu__link" href="/">Визит в театр</a>
+								<div class="main-menu__dropdown-content dropdown-content">
+									<ul class="dropdown-content__list">
+										<li class="dropdown-content__item">
+											<a class="dropdown-content__link" href="/">Пустая ссылка</a>
+										</li>
+										<li class="dropdown-content__item">
+											<a class="dropdown-content__link" href="/">Пустая ссылка</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="main-menu__item">
+								<a class="main-menu__link" href="/">Репертуар</a>
+							</li>
+							<li class="main-menu__item">
+								<a class="main-menu__link" href="/">Наши проекты</a>
+							</li>
+							<li class="main-menu__item">
+								<a class="main-menu__link" href="/">Вопрос-ответ</a>
+							</li>
+							<li class="main-menu__item">
+								<a class="main-menu__link" href="/">Контакты</a>
 							</li>
 						</ul>
-						<div>
-							<input type="text">
+						<div class="main-menu__search">
+							<input type="text" class="main-menu__search-input" placeholder="Поиск по сайту ">
 						</div>
 					</div>
 				</div>
@@ -79,27 +126,46 @@
 	</div>
 
 	<section class="welcome-slider">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
 				<!-- Slider main container -->
 				<div class="swiper-container welcome-slider-container">
 					<!-- Additional required wrapper -->
 					<div class="swiper-wrapper">
-					<!-- Slides -->
-					<div class="swiper-slide">Slide 1</div>
-					<div class="swiper-slide">Slide 2</div>
-					<div class="swiper-slide">Slide 3</div>
-					...
+						<!-- Slides -->
+						<div class="swiper-slide" style="background-image: url(/img/dest/test_layout/welcome-slider-slide.png);">
+							<div class="welcome-slide">
+								<div class="container">
+									<div class="col-3">
+										<div class="welcome-slider__image">
+											<img class="welcome-slider__img" src="" alt="">
+										</div>
+
+									</div>
+									<div class="col">
+										<div class="welcome-slide__content">
+											<div class="welcome-slide__title">Премьера! Спектакль Две стрелы</div>
+											<div class="welcome-slide__date">
+												<div class="welcome-slide__time">27 сентября 2020</div>
+												<div class="welcome-slide__start">16:00</div>
+												<div class="welcome-slide__age">6+</div>
+											</div>
+											<div class="welcome-slide__text">Спектакль по пьесе А. Володина в режиссерской редакции Юрия Сам</div>
+											<div class="btn btn__primary">
+												Купить билеты
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
 					</div>
-					<!-- If we need pagination -->
-					<div class="swiper-pagination"></div>
-				
-					<!-- If we need navigation buttons -->
+
 					<div class="swiper-button-prev"></div>
 					<div class="swiper-button-next"></div>
-				
-					<!-- If we need scrollbar -->
-					<div class="swiper-scrollbar"></div>
+
 				</div>
 			</div>
 		</div>
