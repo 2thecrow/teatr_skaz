@@ -125,12 +125,49 @@
 }
 
 .card {
+    &__image {
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+        position: relative;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: all .3s ease-in-out;
+        }
+    }
+    &__time {
+        position: absolute;
+        bottom: 0;
+        height: 48px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 32px;
+        font-size: 13px;
+        line-height: 32px;
+        color: #fff;
+        background-color: rgba(25, 25, 25, 0.639);
+    }
     &__title {
         font-weight: 400;
         font-size: 24px;
         line-height: 32px;
     }
+    &__content {
+        background-color: #fff;
+        padding: 23px 32px 25px 32px;
+        border-bottom-left-radius: 24px;
+        border-bottom-right-radius: 24px;
+    }
+    &__text {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 24px;
+    }
 }
+
 
 .age-filter {
     display: flex;

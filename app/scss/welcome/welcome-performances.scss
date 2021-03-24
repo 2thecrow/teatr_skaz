@@ -43,6 +43,13 @@
                 display: none;
                 transition: all .25s ease-in-out;
             }
+            .welcome-performances__content .card__title {
+                overflow: hidden; /* Дополнительно включаем для подстраховки */
+            display: -webkit-box; /* Задаем блочный элемент */
+            -webkit-box-orient: vertical; /* Сопутствующий класс */
+            -webkit-line-clamp: 4; /* Кол-во строк */
+            transition: all .3s ease-in-out;
+            }
         }
     }
     &__background {
@@ -73,6 +80,10 @@
         transition: all .3s ease-in-out;
         .card__title {
             margin: 0 0 23px 0;
+            overflow: hidden; /* Дополнительно включаем для подстраховки */
+            display: -webkit-box; /* Задаем блочный элемент */
+            -webkit-box-orient: vertical; /* Сопутствующий класс */
+            -webkit-line-clamp: 2; /* Кол-во строк */
             transition: all .3s ease-in-out;
         }
     }

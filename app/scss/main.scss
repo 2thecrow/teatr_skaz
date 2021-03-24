@@ -2,8 +2,10 @@
 @import 'global';
 @import 'header';
 
+/* Welcome Page */
 @import 'welcome/welcome-slider';
 @import 'welcome/welcome-performances';
 @import 'welcome/welcome-repertoire';
+@import 'welcome/welcome-last-news.scss';
 
 
