@@ -1,7 +1,15 @@
 .welcome-performances {
     padding: 106px 0 97px 0;
-    .section__header {
-        margin: 0 0 48px 0;
+    .section {
+        &__header {
+            margin: 0 0 48px 0;
+        }
+        &__more {
+            &:hover {
+                color: #fff;
+                background-color: #3f593a;
+            }
+        }
     }
     &__card {
         position: relative;
