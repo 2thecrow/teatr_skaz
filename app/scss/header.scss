@@ -9,6 +9,7 @@
 .main-menu {
     position: relative;
     display: flex;
+    /* flex-wrap: wrap; */
     justify-content: space-between;
     background-color: #fff;
     border-radius: 32px;
@@ -143,6 +144,7 @@
         line-height: 26px;
         color: #344d2f;
         text-decoration: none;
+        margin: 0 10px 0 0;
         transition: all .25s ease-out;
         img {
             margin: -9px 25px 0 0;

@@ -1,6 +1,17 @@
 .welcome-slider-container {
     height: 752px;
     padding: 0;
+    .swiper-slide {
+        background-size: cover;
+    }
+    .swiper-pagination {
+        display: none;
+    }
+    .swiper-pagination-bullet {
+        width: 15px;
+        height: 15px;
+        background: #ffd479;
+    }
     .swiper-button-next:after,
     .swiper-button-prev:after{
         display: none;
@@ -38,6 +49,7 @@
     align-items: center;
     height: 100%;
     color: #fff;
+    padding: 0 80px;
     overflow: hidden;
     &__image {
         border-radius: 24px;

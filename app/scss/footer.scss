@@ -1,5 +1,5 @@
 .footer {
-    padding: 60px 0 65px;
+    padding: 60px 0 35px;
     background-image: url(/img/dest/footer/footer-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -8,6 +8,7 @@
         flex-direction: column;
         flex: 1;
         height: 100%;
+        margin: 0 0 30px 0;
     }
     &__item--sponsor {
         font-weight: 400;

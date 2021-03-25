@@ -16,6 +16,8 @@
 
 <body>
 
+	<div class="overlay"></div>
+
 	<div class="header">
 		<div class="container-fluid t-container">
 			<div class="row">
@@ -58,6 +60,132 @@
 								</div>
 							</li>
 						</ul>
+						<div class="burger">
+							<div class="burger__container">
+								<svg class="burger__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24">
+									<path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/>
+								</svg>
+								<svg class="burger__close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+									<path d="M24 20.188l-8.315-8.209 8.2-8.282L20.188 0l-8.212 8.318L3.666.115 0 3.781l8.321 8.24-8.206 8.313L3.781 24l8.237-8.318 8.285 8.203z"/>
+								</svg>
+								МЕНЮ
+							</div>
+						</div>
+						<div class="mobile-menu">
+							<div class="mobile-menu__closebtn">
+								<svg xmlns="http://www.w3.org/2000/svg">
+									<path d="M24 20.188l-8.315-8.209 8.2-8.282L20.188 0l-8.212 8.318L3.666.115 0 3.781l8.321 8.24-8.206 8.313L3.781 24l8.237-8.318 8.285 8.203z"/>
+								</svg>
+							</div>
+							<ul>
+								<li>
+									<a href="">О театре<span><img src="/img/dest/menu/menu-arrow-down.png" alt="Arrow down icon"></span></a>
+									<ul>
+										<li>
+											<a href="">История</a>
+										</li>
+										<li>
+											<a href="">Актеры</a>
+										</li>
+										<li>
+											<a href="">Вакансии</a>
+										</li>
+										<li>
+											<a href="">Документы</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="">Блог</a>
+								</li>
+								<li>
+									<a href="">Афиша</a>
+								</li>
+								<li>
+									<a href="">Визит в театр<span><img src="/img/dest/menu/menu-arrow-down.png" alt="Arrow down icon"></span></a>
+									<ul>
+										<li>
+											<a href="">Пункт 1</a>
+										</li>
+										<li>
+											<a href="">Пункт 2</a>
+										</li>
+										<li>
+											<a href="">Пункт 3</a>
+										</li>
+										<li>
+											<a href="">Пункт 4</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="">Репертуар</a>
+								</li>
+								<li>
+									<a href="">Наши проекты</a>
+								</li>
+								<li>
+									<a href="">Вопрос-ответ</a>
+								</li>
+								<li>
+									<a href="">Контакты</a>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<a href="">О театре<span><img src="/img/dest/menu/menu-arrow-down.png" alt="Arrow down icon"></span></a>
+									<ul>
+										<li>
+											<a href="">История</a>
+										</li>
+										<li>
+											<a href="">Актеры</a>
+										</li>
+										<li>
+											<a href="">Вакансии</a>
+										</li>
+										<li>
+											<a href="">Документы</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="">Блог</a>
+								</li>
+								<li>
+									<a href="">Афиша</a>
+								</li>
+								<li>
+									<a href="">Визит в театр<span><img src="/img/dest/menu/menu-arrow-down.png" alt="Arrow down icon"></span></a>
+									<ul>
+										<li>
+											<a href="">Пункт 1</a>
+										</li>
+										<li>
+											<a href="">Пункт 2</a>
+										</li>
+										<li>
+											<a href="">Пункт 3</a>
+										</li>
+										<li>
+											<a href="">Пункт 4</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="">Репертуар</a>
+								</li>
+								<li>
+									<a href="">Наши проекты</a>
+								</li>
+								<li>
+									<a href="">Вопрос-ответ</a>
+								</li>
+								<li>
+									<a href="">Контакты</a>
+								</li>
+							</ul>
+						  </div> 
 					</div>
 				</div>
 			</div>
@@ -128,18 +256,20 @@
 	<section class="welcome-slider t-wrapper">
 		<div class="container-fluid t-wrapper">
 			<div class="row">
+				<!-- Slider -->
 				<div class="swiper-container welcome-slider-container">
 					<div class="swiper-wrapper">
+						<!-- Slide -->
 						<div class="swiper-slide" style="background-image: url(/img/dest/test_layout/welcome-slider-slide.png);">
 							<div class="welcome-slide">
 								<div class="container">
 									<div class="row">
-										<div class="col-12 d-none d-md-block col-md-3">
+										<div class="col-12 d-none d-md-block col-md-5 col-lg-4 col-xl-3">
 											<div class="welcome-slide__image">
 												<img class="welcome-slide__img" src="/img/dest/test_layout/slider-preview.png" alt="Slider image">
 											</div>
 										</div>
-										<div class="col-12 col-md-9">
+										<div class="col-12 col-md-7 col-lg-7 col-xl-9">
 											<div class="welcome-slide__content">
 												<div class="welcome-slide__title">Премьера! Спектакль Две стрелы</div>
 												<div class="welcome-slide__date">
@@ -161,12 +291,46 @@
 									</div>
 								</div>
 							</div>
-
+						</div>
+						<!-- Slide -->
+						<div class="swiper-slide" style="background-image: url(/img/dest/test_layout/welcome-slider-slide.png);">
+							<div class="welcome-slide">
+								<div class="container">
+									<div class="row">
+										<div class="col-12 d-none d-md-block col-md-5 col-lg-4 col-xl-3">
+											<div class="welcome-slide__image">
+												<img class="welcome-slide__img" src="/img/dest/test_layout/slider-preview.png" alt="Slider image">
+											</div>
+										</div>
+										<div class="col-12 col-md-7 col-lg-7 col-xl-9">
+											<div class="welcome-slide__content">
+												<div class="welcome-slide__title">Премьера! Спектакль Две стрелы</div>
+												<div class="welcome-slide__date">
+													<div class="welcome-slide__date-container">
+														<div class="welcome-slide__time">27 сентября 2020</div>
+														<div class="welcome-slide__start">16:00</div>
+													</div>
+													<div class="welcome-slide__age age-limit">6+</div>
+												</div>
+												<div class="welcome-slide__text">
+													Спектакль по пьесе А. Володина в режиссерской редакции Юрия Самойлова. Род, родители,
+													родной, Родина. Вот откуда пошли эти слова. Действие происходит в 12 тысячелетии до
+													нашей эры. Неожиданное происшествие меняет распорядок жизни сородичей. А что же
+													происходит с человеческими чувствами и ценностями?
+												</div>
+												<div class="btn btn__primary">Купить билеты</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
+					<!-- navigation buttons -->
 					<div class="swiper-button-prev"></div>
 					<div class="swiper-button-next"></div>
-
+					<!-- pagination -->
+  					<div class="swiper-pagination"></div>
 				</div>
 			</div>
 		</div>
@@ -174,6 +338,7 @@
 
 	<section class="welcome-performances t-wrapper">
 		<div class="container">
+			<!-- Heading -->
 			<div class="row">
 				<div class="section__header">
 					<div class="section__title">Ближайшие спектакли</div>
@@ -247,6 +412,7 @@
 						</div>
 					</div>
 				</div>
+				<!-- Caldendar? -->
 				<div class="col">
 					<div class="welcome-performances__item">
 						Calendar
@@ -274,6 +440,7 @@
 			<img src="/img/dest/welcome/welcome-repertoire__tiger-decor.png" alt="Repertoire decor image">
 		</div>
 		<div class="container">
+			<!-- Heading -->
 			<div class="row">
 				<div class="section__header">
 					<div class="section__wrapper">
@@ -301,6 +468,7 @@
 					</div>
 				</div>
 			</div>
+			<!-- Slider -->
 			<div class="row">
 				<div class="welcome-repertoire__slider">
 					<div class="swiper-container welcome-repertoire__slider repertoire-slider">
@@ -411,6 +579,8 @@
 								</a>
 							</div>
 						</div>
+						<!-- pagination -->
+  						<div class="swiper-pagination"></div>
 					</div>
 				</div>
 			</div>
@@ -533,7 +703,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-6">
+				<div class="col-md-6 col-lg-6 col-xl-6">
 					<a class="welcome-projects__card" href="/" style="background-image: url(/img/dest/test_layout/welcome-big-project__bg.png);">
 						<div class="welcome-projects__card-content">
 							<div class="welcome-projects__card-badge">Онлайн</div>
@@ -542,7 +712,7 @@
 						</div>
 					</a>
 				</div>
-				<div class="col-3">
+				<div class="col-md-6 col-lg-6 col-xl-3">
 					<a class="card" href="/">
 						<div class="card__image">
 							<img src="/img/dest/test_layout/welcome-last-news-1.png" alt="Last news 1">
@@ -553,7 +723,7 @@
 						</div>
 					</a>
 				</div>
-				<div class="col-3">
+				<div class="col-md-6 col-lg-6 col-xl-3">
 					<a class="card" href="/">
 						<div class="card__image">
 							<img src="/img/dest/test_layout/welcome-last-news-1.png" alt="Last news 1">
@@ -571,7 +741,7 @@
 	<div class="newsletter t-wrapper">
 		<div class="container">
 			<div class="row">
-				<div class="col-6">
+				<div class="col-lg-6 col-xl-6">
 					<div class="newsletter__item newsletter__item-form newsletter__bg">
 						<div class="newsletter__title">Узнавайте новости</div>
 						<div class="newsletter__text">
@@ -589,7 +759,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-6">
+				<div class="col-lg-6 col-xl-6">
 					<a href="/" class="newsletter__item newsletter__link">
 						<div class="newsletter__link-container">
 							<div>
@@ -616,7 +786,7 @@
 	<div class="footer t-wrapper">
 		<div class="container">
 			<div class="row">
-				<div class="col-3">
+				<div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
 					<div class="footer__item">
 						<a class="footer__title" href="/">Контакты</a>
 						<div class="footer__text">
@@ -641,7 +811,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-3">
+				<div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
 					<div class="footer__item">
 						<a class="footer__title" href="/">Адрес</a>
 						<div class="footer__text">
@@ -654,7 +824,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-2">
+				<div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-2">
 					<div class="footer__item">
 						<a class="footer__title" href="/">Касса</a>
 						<div class="footer__text">
@@ -668,7 +838,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-2">
+				<div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-2">
 					<div class="footer__item footer__item--sponsor">
 						<div class="">
 							<img src="/img/dest/footer/sponsor-icon.png" alt="Sponsor logo">
@@ -681,7 +851,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-2">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-2">
 					<div class="footer__item footer__item--last">
 						<div class="footer__copyright">
 							© 2020 ГАУК КО «Новокузнецкий 
