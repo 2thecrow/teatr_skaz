@@ -5452,6 +5452,13 @@ body {
   background-repeat: no-repeat;
   background-size: cover
 }
+.link-decor::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  bottom: 3px;
+  border-bottom: 1px dotted #fac57d
+}
 .header__nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5771,6 +5778,53 @@ body {
   background-repeat: no-repeat;
   background-size: cover
 }
+.footer__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 100%
+}
+.footer__item--sponsor {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -.008em;
+  color: #638b5c
+}
+.footer__item--sponsor > div {
+  margin: 0 0 10px 0
+}
+.footer__item--last {
+  -ms-flex-pack: distribute;
+  justify-content: space-around
+}
+.footer__copyright {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 24px;
+  color: #fff
+}
+.footer__developers {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 24px;
+  color: #54814b
+}
+.footer__developers a {
+  color: #f4c684;
+  text-decoration: none
+}
+.footer__developers a:hover {
+  color: #f7d7a9;
+  text-decoration: underline
+}
 .footer__title {
   display: block;
   font-family: FranxurterTotallyFat;
@@ -5801,10 +5855,53 @@ body {
   width: 41px;
   height: 41px;
   background-color: #3f593a;
+  background-repeat: no-repeat;
+  background-position: center;
   border-radius: 50%;
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out
+}
+.footer__icon--map {
+  background-image: url(/img/dest/footer/map-icon.png)
+}
+.footer__icon--ticket {
+  background-image: url(/img/dest/footer/tickets-icon.png)
+}
+.footer__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: FranxurterTotallyFat;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: .016em;
+  color: #fac57d;
+  margin: auto 0 0 0;
+  text-transform: uppercase
+}
+.footer__link a {
+  position: relative;
+  color: #fac57d;
+  text-decoration: none;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out
+}
+.footer__link a:hover {
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  color: #fcd6a4
+}
+.footer__link a:hover.link-decor::before {
+  border-bottom: 1px dotted #fcd6a4
+}
+.footer__link .footer__icon {
+  margin: 0 8px 0 0
 }
 .social {
   display: -webkit-box;
@@ -5812,15 +5909,13 @@ body {
   display: flex;
   list-style-type: none;
   padding: 0;
-  margin: 0
+  margin: auto 0 0 0
 }
 .social__item:not(:last-child) {
   margin: 0 8px 0 0
 }
 .social__link {
-  display: block;
-  background-repeat: no-repeat;
-  background-position: center
+  display: block
 }
 .social__link:hover {
   background-color: #fff

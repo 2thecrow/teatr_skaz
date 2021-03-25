@@ -330,3 +330,14 @@
         background-size: cover;
     }
 }
+
+.link-decor {
+    &::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        bottom: 3px;
+        border-bottom: 1px dotted #fac57d;
+    }
+}
+

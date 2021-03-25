@@ -3,6 +3,45 @@
     background-image: url(/img/dest/footer/footer-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
+    &__item {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        height: 100%;
+    }
+    &__item--sponsor {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 18px;
+        letter-spacing: -0.008em;
+        color: #638b5c;
+        > div {
+            margin: 0 0 10px 0;
+        }
+    }
+    &__item--last {
+        justify-content: space-around;
+    }
+    &__copyright {
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 24px;
+        color: #fff;
+    }
+    &__developers {
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 24px;
+        color:#54814b;
+        a {
+            color: #f4c684;
+            text-decoration: none;
+            &:hover {
+                color: #f7d7a9;
+                text-decoration: underline;
+            }
+        }
+    }
     &__title {
         display: block;
         font-family: FranxurterTotallyFat;
@@ -29,8 +68,43 @@
         width: 41px;
         height: 41px;
         background-color: #3f593a;
+        background-repeat: no-repeat;
+        background-position: center;
         border-radius: 50%;
         transition: all .3s ease-in-out;
+    }
+    &__icon--map {
+        background-image: url(/img/dest/footer/map-icon.png);
+    }
+    &__icon--ticket {
+        background-image: url(/img/dest/footer/tickets-icon.png);
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        font-family: FranxurterTotallyFat;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0.016em;
+        color: #fac57d;
+        margin: auto 0 0 0;
+        text-transform: uppercase;
+        a {
+            position: relative;
+            color: #fac57d;
+            text-decoration: none;
+            transition: all .3s ease-in-out;
+            &:hover {
+                transition: all .3s ease-in-out;
+                color: #fcd6a4;
+                &.link-decor::before {
+                    border-bottom: 1px dotted #fcd6a4;
+                }
+            }
+        }
+        .footer__icon {
+            margin: 0 8px 0 0;
+        }
     }
       
 }
@@ -39,7 +113,7 @@
     display: flex;
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: auto 0 0 0;
     &__item {
         &:not(:last-child) {
             margin: 0 8px 0 0;
@@ -47,8 +121,6 @@
     }
     &__link {
         display: block;
-        background-repeat: no-repeat;
-        background-position: center;
         &:hover {
             background-color: #fff;
         }
