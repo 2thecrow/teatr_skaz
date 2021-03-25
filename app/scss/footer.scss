@@ -1,0 +1,96 @@
+.footer {
+    padding: 60px 0 65px;
+    background-image: url(/img/dest/footer/footer-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__title {
+        display: block;
+        font-family: FranxurterTotallyFat;
+        font-size: 24px;
+        line-height: 24px;
+        color: #8bb084; 
+        margin: 0 0 20px 0;
+        text-decoration: none;
+        transition: all .3s ease-in-out;
+        &:hover {
+            color: #fff; 
+            transition: all .3s ease-in-out;
+        }
+    }
+    &__text {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 24px;
+        color: #fff;
+        margin: 0px 0 24px 0;
+    }
+    &__icon {
+        position: relative;
+        width: 41px;
+        height: 41px;
+        background-color: #3f593a;
+        border-radius: 50%;
+        transition: all .3s ease-in-out;
+    }
+      
+}
+
+.social {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    &__item {
+        &:not(:last-child) {
+            margin: 0 8px 0 0;
+        }
+    }
+    &__link {
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center;
+        &:hover {
+            background-color: #fff;
+        }
+    }
+    &__link--vk {
+        background-image: url(/img/dest/footer/vk-icon.png);
+        transition: all .3s ease-in-out;
+        &:hover {
+            background-image: url(/img/dest/footer/vk-icon--hover.png);
+            transition: all .3s ease-in-out;
+        }
+    }
+    &__link--instagram {
+        background-image: url(/img/dest/footer/instagram-icon.png);
+        transition: all .3s ease-in-out;
+        &:hover {
+            background-image: url(/img/dest/footer/instagram-icon--hover.png);
+            transition: all .3s ease-in-out;
+        }
+    }
+    &__link--odnoklassniki {
+        background-image: url(/img/dest/footer/odnoklassniki-icon.png);
+        transition: all .3s ease-in-out;
+        &:hover {
+            background-image: url(/img/dest/footer/odnoklassniki-icon--hover.png);
+            transition: all .3s ease-in-out;
+        }
+    }
+    &__link--facebook {
+        background-image: url(/img/dest/footer/facebook-icon.png);
+        transition: all .3s ease-in-out;
+        &:hover {
+            background-image: url(/img/dest/footer/facebook-icon--hover.png);
+            transition: all .3s ease-in-out;
+        }
+    }
+    &__link--youtube {
+        background-image: url(/img/dest/footer/youtube-icon.png);
+        transition: all .3s ease-in-out;
+        &:hover {
+            background-image: url(/img/dest/footer/youtube-icon--hover.png);
+            transition: all .3s ease-in-out;
+        }
+    }
+}
