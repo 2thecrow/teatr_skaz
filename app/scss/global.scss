@@ -168,7 +168,6 @@
     }
 }
 
-
 .age-filter {
     display: flex;
     align-items: center;
@@ -220,5 +219,36 @@
             color: #344d2f;
             background-color: #fff;
         }
+    }
+}
+
+.newsletter {
+    &__item {
+        &-form {
+            padding: 65px;
+        }
+    }
+    &__title {
+        
+    }
+    &__text {
+        
+    }
+    &__form {
+        
+    }
+    &__field {
+        
+    }
+    &__input {
+        
+    }
+    &__submit {
+        
+    }
+    &__bg {
+        background-image: url(/img/dest/global/newsletter__bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }

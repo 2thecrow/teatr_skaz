@@ -1,5 +1,5 @@
 .welcome-last-news {
-    padding: 107px 0 100px 0;
+    padding: 107px 0 35px 0;
     .section {
         &__header {
             margin: 0 0 48px 0;
@@ -25,10 +25,9 @@
             overflow: hidden; /* Дополнительно включаем для подстраховки */
             display: -webkit-box; /* Задаем блочный элемент */
             -webkit-box-orient: vertical; /* Сопутствующий класс */
-            -webkit-line-clamp: 3; /* Кол-во строк */
+            -webkit-line-clamp: 2; /* Кол-во строк */
         }
         &__content {
-            flex: 1 1 auto;
             box-shadow: 0px 16px 48px 0px rgba(195, 195, 195, 0.24);
         }
         &__text {
@@ -51,7 +50,6 @@
 .card-list {
     position: relative;
     display: flex;
-    height: 100%;
     flex-direction: column;
     justify-content: center;
     list-style-type: none;
