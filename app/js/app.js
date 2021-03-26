@@ -91,6 +91,32 @@ document.addEventListener('DOMContentLoaded', () => {
 			el: '.swiper-pagination',
 		  },
 	});
+
+	
+
+	let timelinSliderContent = new Swiper('.timeline-content__slider', {
+		// Optional parameters
+	    spaceBetween: 10,
+		autoHeight: true,
+		speed: 800,
+	
+		// Navigation arrows
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		
+	})
+	let timelinSliderDate = new Swiper('.timeline-slider__dates', {
+		spaceBetween: 70,
+	    centeredSlides: true,
+	    slidesPerView: 'auto',
+		slideToClickedSlide: true,
+		speed: 800,
+	})
+	
+	timelinSliderDate.controller.control = timelinSliderContent;
+	timelinSliderContent.controller.control = timelinSliderDate;
 	
 
 })

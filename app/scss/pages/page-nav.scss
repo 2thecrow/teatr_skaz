@@ -1,0 +1,92 @@
+.page-nav {
+    position: relative;
+    padding: 82px 0 56px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .section__title {
+        color: #fff;
+        margin: 0 0 22px 0;
+    }
+    &__container {
+        display: flex;
+        justify-content: center;
+    }
+    &__menu {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        padding: 0;
+        margin: 0 auto;
+        border-radius: 24px;
+    }
+    &__menu--green {
+        border: 3px solid #3a5735;
+        background-color: #3a5735;
+        box-shadow: 0px 8px 40px 0px rgba(54, 79, 49, 0.16);
+    }
+    &__item {
+        position: relative;
+        transition: all .3s ease-in-out;
+        &:not(:last-child) { 
+            &::before {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 1px;
+                height: 24px;
+                background-color: rgba(88, 114, 83, .478);
+                transition: all .1s ease-in-out;
+            }
+              
+        }
+        &:first-child {
+            border-top-left-radius: 24px;
+            border-bottom-left-radius: 24px;
+        }
+        &:last-child {
+            border-top-right-radius: 24px;
+            border-bottom-right-radius: 24px;
+        }
+        &:hover {
+            .page-nav__link {
+                color: #344d2f;
+            }
+            &::before {
+                display: none;
+                transition: all .1s ease-in-out;
+            }
+            background-color: #fff;
+            transition: all .3s ease-in-out;
+        }
+    }
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 28px;
+        color: #fff;
+        padding: 11px 60px;
+        text-decoration: none;
+        transition: all .3s ease-in-out;
+        
+    }
+    &__bg--green {
+        background-image: url(/img/dest/menu/page-nav__bg--green.png);
+    }
+}
+
+.Прямоугольник__скругл__углы_21 {
+    border-radius: 24px;
+    
+    position: absolute;
+    left: 343px;
+    top: 392px;
+    width: 1233px;
+    height: 56px;
+    z-index: 131;
+  }
+  

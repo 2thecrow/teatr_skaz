@@ -1,0 +1,27 @@
+.timeline-slider {
+    &__dates {
+        height: 100px;
+    }
+    &__item {
+        position: relative;
+        display: inline-flex;
+    }
+    .swiper-slide {
+        width: auto;
+    }
+}
+.timeline-content {
+    &__slider {
+        height: 80%;
+    }
+    &__item {
+        position: relative;
+    }
+}
+
+.timeline {
+    position: relative;
+    &__controls {
+
+    }
+}
