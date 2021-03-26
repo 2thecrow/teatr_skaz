@@ -1,6 +1,7 @@
 "use strict";
 
 document.addEventListener('DOMContentLoaded', function () {
+  /* Сделал по бырому анкор */
   window.scrollBy({
     top: 100,
     behavior: 'smooth'

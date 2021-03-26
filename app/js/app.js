@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+	/* Сделал по бырому анкор */
 	window.scrollBy({ top: 100, behavior: 'smooth' });
 
 	/* Hamburher menu */

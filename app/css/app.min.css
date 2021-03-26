@@ -6017,6 +6017,37 @@ body {
 .timeline-slider .swiper-button-prev:after {
   display: none
 }
+.timeline-content__photo-link {
+  display: inline-block
+}
+.timeline-content__photo-link a {
+  display: block;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 26px;
+  color: #364f31;
+  background-color: #fff;
+  background-image: url(/img/dest/pages/arrow-down-small-icon.png);
+  background-repeat: no-repeat;
+  background-position: right 15% center;
+  padding: 4px 26px 4px 15px;
+  border-radius: 10px;
+  text-decoration: none
+}
+.timeline-content__photo-link a span {
+  position: relative
+}
+.timeline-content__photo-link a span::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  border-bottom: 1px dotted #364f31
+}
+.timeline-content__photo-link a:hover {
+  background-color: rgba(54,79,49,.1)
+}
 .timeline-content__slider {
   height: 80%
 }
