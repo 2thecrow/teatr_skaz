@@ -101,4 +101,17 @@
         left: -78px;
     }
 }
-  
+
+.timeline-photo {
+    max-width: 930px;
+    position: relative;
+    margin: 110px auto 0;
+    &__item {
+        
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+}

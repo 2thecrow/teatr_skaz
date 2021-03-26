@@ -6046,6 +6046,17 @@ body {
   right: -78px;
   left: -78px
 }
+.timeline-photo {
+  max-width: 930px;
+  position: relative;
+  margin: 110px auto 0
+}
+.timeline-photo__item img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover
+}
 .overlay {
   position: fixed;
   left: 0;
