@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+	window.scrollBy({ top: 100, behavior: 'smooth' });
+
 	/* Hamburher menu */
     const menu = document.querySelector('.mobile-menu'); /* Aside menu */
     const burger = document.querySelector('.burger'); /* desktop btn aside menu  */

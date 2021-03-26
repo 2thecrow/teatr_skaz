@@ -1,7 +1,12 @@
 "use strict";
 
 document.addEventListener('DOMContentLoaded', function () {
+  window.scrollBy({
+    top: 100,
+    behavior: 'smooth'
+  });
   /* Hamburher menu */
+
   var menu = document.querySelector('.mobile-menu');
   /* Aside menu */
 

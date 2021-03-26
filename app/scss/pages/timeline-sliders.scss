@@ -20,6 +20,12 @@
         font-size: 18px;
         line-height: 32px;
         padding: 8px 24px;
+        &:hover {
+            color: #fff;
+            background-color: #fed071;
+            border-radius: 18px;
+            box-shadow: inset 0px 4px 8px 0px rgba(163, 144, 119, 0.24);
+        }
     }
     .swiper-slide {
         display: flex;
@@ -27,6 +33,7 @@
         width: auto;
     }
     .swiper-slide.swiper-slide-active .timeline-slider__item {
+        cursor: default;
         color: #fff;
         background-color: #fed071;
         border-radius: 18px;
@@ -103,15 +110,65 @@
 }
 
 .timeline-photo {
-    max-width: 930px;
+    max-width: 985px;
     position: relative;
     margin: 110px auto 0;
+    .section__header {
+        margin: 0 0 25px 0;
+    }
+    #timeline-photo {
+        scroll-behavior: smooth;
+    }
     &__item {
-        
+        position: relative;
+        transition: all .3s ease-in-out;
         img {
             width: 100%;
             height: auto;
             object-fit: cover;
         }
+        &:hover {
+            transition: all .3s ease-in-out;
+            .timeline-photo__block {
+                display: none;
+                transition: all .3s ease-in-out;
+            }
+        }
+        a {
+            transition: all .3s ease-in-out;
+            &:hover {
+                transition: all .3s ease-in-out;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background-color: rgba(25,25,25,.639);
+                    background-image: url(/img/dest/pages/gallery-zoom-icon.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 120px 120px;
+                    transition: all .3s ease-in-out;
+                }
+            }
+        }
+        
+    }
+    &__block {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(25,25,25,.639);
+        padding: 22px 28px;
+        transition: all .3s ease-in-out;
+    }
+    &__description {
+        color: #fff;
+        overflow: hidden; /* Дополнительно включаем для подстраховки */
+        display: -webkit-box; /* Задаем блочный элемент */
+        -webkit-box-orient: vertical; /* Сопутствующий класс */
+        -webkit-line-clamp: 2; /* Кол-во строк */
     }
 }
