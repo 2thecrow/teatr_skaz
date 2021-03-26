@@ -1,27 +1,103 @@
 .timeline-slider {
+    &__container {
+        position: relative;
+        max-width: 1170px;
+        background-color: #fff;
+        border-radius: 32px;
+        padding: 0 30px;
+        margin: 0 auto 40px;
+        box-shadow: 0px 8px 40px 0px rgba(116, 116, 116, 0.16);
+    }
     &__dates {
-        height: 100px;
+        height: 80px;
     }
     &__item {
+        cursor: pointer;
         position: relative;
         display: inline-flex;
+        align-items: center;
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 32px;
+        padding: 8px 24px;
     }
     .swiper-slide {
+        display: flex;
+        align-items: center;
         width: auto;
+    }
+    .swiper-slide.swiper-slide-active .timeline-slider__item {
+        color: #fff;
+        background-color: #fed071;
+        border-radius: 18px;
+        box-shadow: inset 0px 4px 8px 0px rgba(163, 144, 119, 0.24);
+    }
+    .swiper-button-prev, .swiper-button-next {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: 1px solid #364f31;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: all .3s ease-in-out;
+        outline: none;
+        &:hover { 
+            background-color: #fed071;   
+            transition: all .3s ease-in-out;
+        }
+    }
+    .swiper-button-prev {
+        left: 0;
+        background-image: url(/img/src/slider/slider-arrow-circle-left.png);
+    }
+    
+    .swiper-button-next {
+        right: 0;
+        background-image: url(/img/src/slider/slider-arrow-circle-right.png);
+    }
+    .swiper-button-next:after,
+    .swiper-button-prev:after{
+        display: none;
     }
 }
 .timeline-content {
+  
     &__slider {
         height: 80%;
     }
     &__item {
+        max-width: 690px;
         position: relative;
+        border-bottom: 1px solid rgba(230, 234, 235, 0.522);
+        padding: 25px 0;
+        margin: 0 auto;
+        &::before {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 100%;
+            bottom: -2px;
+            background-color: rgba(255, 255, 255, 0.004);
+        }
+    }
+    &__title {
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 32px;
+    }
+    &__text {
+        font-size: 16px;
+        line-height: 26px;
     }
 }
 
 .timeline {
     position: relative;
     &__controls {
-
+        position: absolute;
+        top: 35px;
+        right: -78px;
+        left: -78px;
     }
 }
+  
