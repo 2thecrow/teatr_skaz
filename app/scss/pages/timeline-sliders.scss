@@ -84,6 +84,7 @@
         font-weight: 900;
         font-size: 24px;
         line-height: 32px;
+        margin: 0 0 12px 0;
     }
     &__text {
         font-size: 16px;
@@ -95,7 +96,7 @@
     position: relative;
     &__controls {
         position: absolute;
-        top: 35px;
+        top: 36px;
         right: -78px;
         left: -78px;
     }

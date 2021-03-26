@@ -6030,7 +6030,8 @@ body {
 .timeline-content__title {
   font-weight: 900;
   font-size: 24px;
-  line-height: 32px
+  line-height: 32px;
+  margin: 0 0 12px 0
 }
 .timeline-content__text {
   font-size: 16px;
@@ -6041,7 +6042,7 @@ body {
 }
 .timeline__controls {
   position: absolute;
-  top: 35px;
+  top: 36px;
   right: -78px;
   left: -78px
 }
