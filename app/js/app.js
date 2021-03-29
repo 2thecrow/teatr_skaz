@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		breakpoints: {
 			375: {
 				slidesPerView: 1,
-			  },
+			},
 			640: {
 			  slidesPerView: 2,
 			  spaceBetween: 20,
@@ -116,6 +116,18 @@ document.addEventListener('DOMContentLoaded', () => {
 	    slidesPerView: 'auto',
 		slideToClickedSlide: true,
 		speed: 800,
+
+		breakpoints: {
+			375: {
+				spaceBetween: 10,
+			},
+			576: {
+				spaceBetween: 10,
+			},
+			800: {
+				spaceBetween: 70,
+			}
+		},
 	})
 	
 	timelinSliderDate.controller.control = timelinSliderContent;
