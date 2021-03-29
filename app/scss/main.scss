@@ -1,9 +1,8 @@
 @import 'config';
 @import 'global';
 @import 'header';
-@import 'pages/page-nav';
-@import 'pages/page';
-@import 'pages/timeline-sliders';
+
+
 @import 'mobile-menu';
 @import 'footer';
 
@@ -14,6 +13,14 @@
 @import 'welcome/welcome-last-news';
 @import 'welcome/welcome-projects';
 
+/* Page */
+/* Global page styles */
+@import 'pages/page-nav';
+@import 'pages/page';
+/* Page - About theatre -- history */
+@import 'pages/timeline-sliders';
+/* Page - About theatre -- history */
+@import 'pages/about-theatre-actors';
 
 /* All media */
 @import 'media';

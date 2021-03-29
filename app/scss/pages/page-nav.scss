@@ -26,6 +26,17 @@
     &__item {
         position: relative;
         transition: all .3s ease-in-out;
+        &.active {
+            .page-nav__link {
+                color: #344d2f;
+            }
+            &::before {
+                display: none;
+                transition: all .1s ease-in-out;
+            }
+            background-color: #fff;
+            transition: all .3s ease-in-out;
+        }
         &:not(:last-child) { 
             &::before {
                 content: '';

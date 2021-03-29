@@ -1,0 +1,27 @@
+.actors-card {
+    &.card {
+        margin: 0 0 30px 0;
+    }
+    .card__image {
+        max-height: 460px;
+    }
+    .card__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 145px;
+    }
+    .card__title {
+        margin: 0 0 9px 0;
+        overflow: hidden; /* include for safety */
+        display: -webkit-box; /* setting a block element  */
+        -webkit-box-orient: vertical; /* companion class   */
+        -webkit-line-clamp: 2; /* number of lines  */
+    }
+    .card__text {
+        overflow: hidden; /* include for safety */
+        display: -webkit-box; /* setting a block element  */
+        -webkit-box-orient: vertical; /* companion class   */
+        -webkit-line-clamp: 1; /* number of lines  */
+    }
+}
