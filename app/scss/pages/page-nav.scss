@@ -23,6 +23,17 @@
         background-color: #3a5735;
         box-shadow: 0px 8px 40px 0px rgba(54, 79, 49, 0.16);
     }
+    &__bg--green {
+        background-image: url(/img/dest/menu/page-nav__bg--green.png);
+    }
+    &__menu--terracotta {
+        border: 3px solid #3a5735;
+        background-color: #3a5735;
+        box-shadow: 0px 8px 40px 0px rgba(54, 79, 49, 0.16);
+    }
+    &__bg--terracotta {
+        background-image: url(/img/dest/menu/page-nav__bg--terracotta.png);
+    }
     &__item {
         position: relative;
         transition: all .3s ease-in-out;
@@ -84,9 +95,7 @@
         transition: all .3s ease-in-out;
         
     }
-    &__bg--green {
-        background-image: url(/img/dest/menu/page-nav__bg--green.png);
-    }
+    
 }
 
 .Прямоугольник__скругл__углы_21 {

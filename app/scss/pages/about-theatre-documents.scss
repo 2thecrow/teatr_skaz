@@ -1,0 +1,172 @@
+.document-filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    width: 100%;
+    border-radius: 24px;
+    margin: 0 auto 64px;
+    transition: all .1s ease-in-out;
+    &.active {
+
+        height: auto;
+        background-color: #fff;
+        padding: 0 15px 9px 15px;
+        box-shadow: 0px 16px 48px 0px rgba(195, 195, 195, 0.24);
+        transition: all .1s ease-in-out;
+        .document-filter__list {
+            display: flex;
+        }
+        .document-filter__btn {
+            border: 9px solid #fff;
+        }
+    }
+    &__btn {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 690px;
+        width: 100%;
+        font-size: 20px;
+        line-height: 36px;
+        background-color: #f9c37c;
+        padding: 14px 20px;
+        border-radius: 32px;
+        border: 9px solid #fff;
+        transition: all .3s ease-in-out;
+        &:hover {
+            border: 9px solid #fffcf9;
+            background-color: #fbd5a5;
+            transition: all .3s ease-in-out;
+        }
+
+        &.active {
+            .document-filter__btn-icon {
+                transform: rotate(180deg);
+                transition: transform .3s ease-in-out;
+            }
+        }
+    }
+
+    &__btn-icon {
+        display: block;
+        width: 11px;
+        height: 5px;
+        margin: 0 0 0 12px;
+        transition: transform .3s ease-in-out;
+    }
+
+    &__list {
+        display: none;
+        max-width: 1170px;
+        width: 100%;
+        padding: 60px 0 0 0;
+        margin: 0 auto;
+    }
+
+    &__item {
+        margin: 0 0 60px 0;
+        input {
+            padding: 0;
+            height: initial;
+            width: initial;
+            margin-bottom: 0;
+            display: none;
+            cursor: pointer;
+
+            &:checked+label {
+                font-weight: 900;
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 24px;
+                    height: 24px;
+                    background-image: url(/img/dest/pages/checkbox-checked.png);
+                }
+                &::before {
+                    background: none;
+                }
+            }
+        }
+
+        label {
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            line-height: 22px;
+            &:before {
+                content: '';
+                -webkit-appearance: none;
+                background-color: transparent;
+                width: 24px;
+                height: 24px;
+                background-image: url(/img/dest/pages/checkbox-bg.png);
+                padding: 10px;
+                display: inline-flex;
+                align-items: center;
+                position: relative;
+                cursor: pointer;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+.document-card {
+    display: flex;
+    align-items: center;
+    color: #344d2f;
+    padding: 24px 56px 24px 32px;
+    border: 1px dashed #c8ced0;
+    border-radius: 24px;
+    margin: 0 0 30px 0;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+    &:hover {
+        color: #2f452a;
+        background-color: #fff;
+        border: 1px dashed #fff;
+        transition: all .3s ease-in-out;
+    }
+    &__image {
+        margin: 0 24px 0 0;
+    }
+    &__content {
+
+    }
+    &__title {
+        font-size: 20px;
+        line-height: 28px;
+        margin: 0 0 13px 0;
+    }
+    &__info {
+        display: flex;
+        font-size: 14px;
+        line-height: 32px;
+    }
+    &__size {
+        color: #a4b5bc;
+        margin: 0 18px 0 0;
+    }
+    &__link {
+        font-weight: 900;
+    }
+}
+
+
+.Прямоугольник__скругл__углы1000 {
+    border-width: 1px;
+    border-color: #c8ced0;
+    border-style: dashed;
+    border-radius: 24px;
+    position: absolute;
+    left: 255px;
+    top: 1135px;
+    width: 447px;
+    height: 175px;
+    z-index: 179;
+  }
+  

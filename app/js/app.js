@@ -1,5 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+	const documentFilterBtn = document.querySelector('.document-filter__btn');
+	const documentFilter = document.querySelector('.document-filter');
+	documentFilterBtn.addEventListener('click', () => {
+		documentFilterBtn.classList.toggle('active')
+		documentFilter.classList.toggle('active')
+	})
+
 	/* Сделал по бырому анкор */
 	window.scrollBy({ top: 100, behavior: 'smooth' });
 
