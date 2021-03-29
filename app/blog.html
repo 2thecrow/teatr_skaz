@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Блог</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="/img/favicon.png">
+	<meta property="og:image" content="/images/dest/preview.jpg">
+	<!-- SwiperCSS -->
+	<link rel="stylesheet" href="/css/swiper-bundle.css">
+	<!-- MainCSS -->
+	<link rel="stylesheet" href="/css/app.min.css">
+
+</head>
+
+<body>
+
+	<div class="overlay"></div>
+
+	<div class="header">
+		<div class="container-fluid t-container">
+			<div class="row">
+				<div class="col-12">
+					<div class="view-switch">
+						<div class="view-switch__btn">
+							<div class="view-switch__link">Версия для слабовидящих</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="header__nav header-nav">
+						<a href="/" class="header-nav__logo">
+							<img src="/img/dest/header/logo__header.png" alt="Header logo">
+							<p>Новокузнецкий театр кукол «Сказ»</p>
+						</a>
+						<ul class="header-nav__list header-list">
+							<li class="header-list__item header-list__item--address">
+								Новокузнецк, пр. Металлургов, 31
+								<div class="header-list__link">
+									<span>Смотреть на карте</span>
+								</div>
+							</li>
+							<li class="header-list__item header-list__item--phone">
+								<a href="tel:+73843745360">+7 (3843) 74-53-60</a>
+								<div class="header-list__link">
+									<span>Заказать звонок</span>
+								</div>
+							</li>
+							<li class="header-list__item">
+								<div class="buy-ticket">
+									<div class="buy-ticket__border">
+										<div class="buy-ticket__inner">
+											<img src="/img/dest/header/buy-tickets-icon.png" alt="Ticket icon">Купить билеты
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="burger">
+							<div class="burger__container">
+								<svg class="burger__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24">
+									<path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
+								</svg>
+								<svg class="burger__close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+									<path d="M24 20.188l-8.315-8.209 8.2-8.282L20.188 0l-8.212 8.318L3.666.115 0 3.781l8.321 8.24-8.206 8.313L3.781 24l8.237-8.318 8.285 8.203z" />
+								</svg>
+								МЕНЮ
+							</div>
+						</div>
+						<div class="mobile-menu">
+							<div class="mobile-menu__closebtn">
+								<svg xmlns="http://www.w3.org/2000/svg">
+									<path d="M24 20.188l-8.315-8.209 8.2-8.282L20.188 0l-8.212 8.318L3.666.115 0 3.781l8.321 8.24-8.206 8.313L3.781 24l8.237-8.318 8.285 8.203z" />
+								</svg>
+							</div>
+							<ul>
+								<li>
+									<a href="">О театре<span><img src="/img/dest/menu/menu-arrow-down.png" alt="Arrow down icon"></span></a>
+									<ul>
+										<li>
+											<a href="">История</a>
+										</li>
+										<li>
+											<a href="">Актеры</a>
+										</li>
+										<li>
+											<a href="">Вакансии</a>
+										</li>
+										<li>
+											<a href="">Документы</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="">Блог</a>
+								</li>
+								<li>
+									<a href="">Афиша</a>
+								</li>
+								<li>
+									<a href="">Визит в театр<span><img src="/img/dest/menu/menu-arrow-down.png" alt="Arrow down icon"></span></a>
+									<ul>
+										<li>
+											<a href="">Пункт 1</a>
+										</li>
+										<li>
+											<a href="">Пункт 2</a>
+										</li>
+										<li>
+											<a href="">Пункт 3</a>
+										</li>
+										<li>
+											<a href="">Пункт 4</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="">Репертуар</a>
+								</li>
+								<li>
+									<a href="">Наши проекты</a>
+								</li>
+								<li>
+									<a href="">Вопрос-ответ</a>
+								</li>
+								<li>
+									<a href="">Контакты</a>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<a href="">О театре<span><img src="/img/dest/menu/menu-arrow-down.png" alt="Arrow down icon"></span></a>
+									<ul>
+										<li>
+											<a href="">История</a>
+										</li>
+										<li>
+											<a href="">Актеры</a>
+										</li>
+										<li>
+											<a href="">Вакансии</a>
+										</li>
+										<li>
+											<a href="">Документы</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="">Блог</a>
+								</li>
+								<li>
+									<a href="">Афиша</a>
+								</li>
+								<li>
+									<a href="">Визит в театр<span><img src="/img/dest/menu/menu-arrow-down.png" alt="Arrow down icon"></span></a>
+									<ul>
+										<li>
+											<a href="">Пункт 1</a>
+										</li>
+										<li>
+											<a href="">Пункт 2</a>
+										</li>
+										<li>
+											<a href="">Пункт 3</a>
+										</li>
+										<li>
+											<a href="">Пункт 4</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="">Репертуар</a>
+								</li>
+								<li>
+									<a href="">Наши проекты</a>
+								</li>
+								<li>
+									<a href="">Вопрос-ответ</a>
+								</li>
+								<li>
+									<a href="">Контакты</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="main-menu">
+						<ul class="main-menu__list">
+							<li class="main-menu__item main-menu__dropdown">
+								<a class="main-menu__link" href="/">О театре</a>
+								<div class="main-menu__dropdown-content dropdown-content">
+									<ul class="dropdown-content__list">
+										<li class="dropdown-content__item">
+											<a class="dropdown-content__link" href="/">История</a>
+										</li>
+										<li class="dropdown-content__item">
+											<a class="dropdown-content__link" href="/">Актеры</a>
+										</li>
+										<li class="dropdown-content__item">
+											<a class="dropdown-content__link" href="/">Вакансии</a>
+										</li>
+										<li class="dropdown-content__item">
+											<a class="dropdown-content__link" href="/">Документы</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="main-menu__item">
+								<a class="main-menu__link" href="/">Блог</a>
+							</li>
+							<li class="main-menu__item">
+								<a class="main-menu__link" href="/">Афиша</a>
+							</li>
+							<li class="main-menu__item main-menu__dropdown">
+								<a class="main-menu__link" href="/">Визит в театр</a>
+								<div class="main-menu__dropdown-content dropdown-content">
+									<ul class="dropdown-content__list">
+										<li class="dropdown-content__item">
+											<a class="dropdown-content__link" href="/">Пустая ссылка</a>
+										</li>
+										<li class="dropdown-content__item">
+											<a class="dropdown-content__link" href="/">Пустая ссылка</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="main-menu__item">
+								<a class="main-menu__link" href="/">Репертуар</a>
+							</li>
+							<li class="main-menu__item">
+								<a class="main-menu__link" href="/">Наши проекты</a>
+							</li>
+							<li class="main-menu__item">
+								<a class="main-menu__link" href="/">Вопрос-ответ</a>
+							</li>
+							<li class="main-menu__item">
+								<a class="main-menu__link" href="/">Контакты</a>
+							</li>
+						</ul>
+						<div class="main-menu__search">
+							<input type="text" class="main-menu__search-input" placeholder="Поиск по сайту ">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section class="page-nav page-nav__bg--terracotta t-wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="section__header section__header--text-center">
+					<div class="section__title">О театре</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="page-nav__container">
+					<ul class="page-nav__menu page-nav__menu--terracotta">
+						<li class="page-nav__item active">
+							<a class="page-nav__link" href="">Новости и события</a>
+						</li>
+						<li class="page-nav__item">
+							<a class="page-nav__link" href="">Полезная информация</a>
+						</li>
+						<li class="page-nav__item">
+							<a class="page-nav__link" href="">О нас пишут </a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<article class="page t-wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="section__header section__header--text-center">
+					<div class="section__title">Новости и события</div>
+				</div>
+			</div>
+			<div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2">
+				<div class="col">
+					<a class="blog-card" href="/">
+						<div class="blog-card__image">
+							<img src="/img/dest/test_layout/blog-photo-1.png" alt="Blog image">
+						</div>
+						<div class="card__content">
+							<div class="blog-card__date">18 декабря 2020</div>
+							<div class="card__title">М. А. Евса поздравляет с новогодними праздниками</div>
+							<div class="card__text">
+								Уважаемые коллеги! Примите самые тёплые и искренние поздравления
+								С Новым Годом и Рождеством!
+								Уходящий год был непростым для всей сферы культуры Кузбасса!
+								Но благодаря профессиональной слаженной работе мы сумели достойно пройти все испытания!
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col">
+					<a class="blog-card" href="/">
+						<div class="blog-card__image">
+							<img src="/img/dest/test_layout/blog-photo-2.png" alt="Blog image">
+						</div>
+						<div class="card__content">
+							<div class="blog-card__date">18 декабря 2020</div>
+							<div class="card__title">Благотворительный новогодний спектакль</div>
+							<div class="card__text">
+								Новый год – время чудес и исполнения желаний, и одним 
+								из приоритетных направлений творческой деятельности театра кукол 
+								«Сказ» многие годы является работа с социально незащищенной категорией зрителей.
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col">
+					<a class="blog-card" href="/">
+						<div class="blog-card__image">
+							<img src="/img/dest/test_layout/blog-photo-3.png" alt="Blog image">
+						</div>
+						<div class="card__content">
+							<div class="blog-card__date">18 декабря 2020</div>
+							<div class="card__title">Дорогие зрители! Приглашаем Вас на новогодний спектакль</div>
+							<div class="card__text">
+								Дорогие друзья! За ощущением волшебства и новогодним настроением приходите в Новокузнецкий театр кукол «Сказ». 
+								Рады встрече с Вами!
+								Касса 74-53-60. 
+								Сайт www.ntkskaz.ru
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col">
+					<a class="blog-card" href="/">
+						<div class="blog-card__image">
+							<img src="/img/dest/test_layout/blog-photo-4.png" alt="Blog image">
+						</div>
+						<div class="card__content">
+							<div class="blog-card__date">18 декабря 2020</div>
+							<div class="card__title">Марк Твен продолжает рубрику «Литературная страничка»</div>
+							<div class="card__text">
+								Герой нашей  рубрики писатель, журналист, общественный деятель Марк Твен. Марк Твен трудился 
+								в самых разных жанрах – сатира, юмор, публицистика, философская фантастика, это все было ему по силам.
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col">
+					<a class="blog-card" href="/">
+						<div class="blog-card__image">
+							<img src="/img/dest/test_layout/blog-photo-1.png" alt="Blog image">
+						</div>
+						<div class="card__content">
+							<div class="blog-card__date">18 декабря 2020</div>
+							<div class="card__title">Марк Твен продолжает рубрику «Литературная страничка»</div>
+							<div class="card__text">
+								Герой нашей  рубрики писатель, журналист, общественный деятель Марк Твен. Марк Твен трудился 
+								в самых разных жанрах – сатира, юмор, публицистика, философская фантастика, это все было ему по силам.
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col">
+					<a class="blog-card" href="/">
+						<div class="blog-card__image">
+							<img src="/img/dest/test_layout/blog-photo-5.png" alt="Blog image">
+						</div>
+						<div class="card__content">
+							<div class="blog-card__date">18 декабря 2020</div>
+							<div class="card__title">Благотворительный новогодний спектакль</div>
+							<div class="card__text">
+								Новый год – время чудес и исполнения желаний, и одним 
+								из приоритетных направлений творческой деятельности театра кукол 
+								«Сказ» многие годы является работа с социально незащищенной категорией зрителей.
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</article>
+
+	<div class="newsletter t-wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-xl-6">
+					<div class="newsletter__item newsletter__item-form newsletter__bg">
+						<div class="newsletter__title">Узнавайте новости</div>
+						<div class="newsletter__text">
+							Оставьте свой емайл, чтобы узнавать первыми о премьерах спектаклей, наших проектах и интересных
+							событиях в жизни театра.
+						</div>
+						<div class="newsletter__form">
+							<div class="newsletter__field">
+								<input type="text" class="newsletter__input" placeholder="Введите Вашу почту">
+								<div class="newsletter__submit">Отправить</div>
+							</div>
+						</div>
+						<div class="newsletter__decor">
+							<img src="/img/dest/global/form-tiger.png" alt="Newsletter decoration">
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-xl-6">
+					<a href="/" class="newsletter__item newsletter__link">
+						<div class="newsletter__link-container">
+							<div>
+								<div class="newsletter__title">О театре</div>
+								<div class="newsletter__text">
+									<p>Узнайте как развивался театр в разное время, а так же какие еще изменения ждут его. </p>
+									<p>
+										Здесь вы так же найдете много интересной
+										информации об артистах театра и о закулисной
+										жизни.
+									</p>
+								</div>
+							</div>
+							<div class="newsletter__logo">
+								<img src="/img/dest/global/newsletter-logo.png" alt="Newsletter logo">
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer t-wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+					<div class="footer__item">
+						<a class="footer__title" href="/">Контакты</a>
+						<div class="footer__text">
+							Присоединяйтесь к нам <br> в социальных сетях:
+						</div>
+						<ul class="footer__social social">
+							<li class="social__item">
+								<a class="social__link footer__icon social__link--vk" href="/"></a>
+							</li>
+							<li class="social__item">
+								<a class="social__link footer__icon social__link--instagram" href="/"></a>
+							</li>
+							<li class="social__item">
+								<a class="social__link footer__icon social__link--odnoklassniki" href="/"></a>
+							</li>
+							<li class="social__item">
+								<a class="social__link footer__icon social__link--facebook" href="/"></a>
+							</li>
+							<li class="social__item">
+								<a class="social__link footer__icon social__link--youtube" href="/"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+					<div class="footer__item">
+						<a class="footer__title" href="/">Адрес</a>
+						<div class="footer__text">
+							654079, Кемеровская область, <br>
+							г. Новокузнецк, пр. Металлургов, 31
+						</div>
+						<div class="footer__link footer__link--map">
+							<div class="footer__icon footer__icon--map"></div>
+							<a href="" class="link-decor">Посмотреть на карте</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-2">
+					<div class="footer__item">
+						<a class="footer__title" href="/">Касса</a>
+						<div class="footer__text">
+							Пн-Пт 9:00-17:30, <br>
+							обед — 13:00 -13:30 <br>
+							Сб, Вс — выходной
+						</div>
+						<div class="footer__link footer__link--map">
+							<div class="footer__icon footer__icon--ticket"></div>
+							<a href="" class="link-decor">Купить билет</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-2">
+					<div class="footer__item footer__item--sponsor">
+						<div class="">
+							<img src="/img/dest/footer/sponsor-icon.png" alt="Sponsor logo">
+						</div>
+						<div>
+							Сайт создан при финансовой
+							поддержке НКО
+							«Благотворительный фонд
+							«ЕВРАЗа» – «Сибирь».
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-2">
+					<div class="footer__item footer__item--last">
+						<div class="footer__copyright">
+							© 2020 ГАУК КО «Новокузнецкий
+							театр кукол «Сказ»
+						</div>
+						<div class="footer__developers">
+							Разработка сайта — <a href="">Айти Сити</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- SwiperJS -->
+	<script src="/js/swiper-bundle.js"></script>
+	<!-- fslightbox -->
+	<script src="/js/fslightbox/fslightbox.js"></script>
+	<!-- MainJS -->
+	<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+	<script src="/js/app.min.js"></script>
+
+</body>
+
+</html>

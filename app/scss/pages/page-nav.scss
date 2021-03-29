@@ -22,14 +22,33 @@
         border: 3px solid #3a5735;
         background-color: #3a5735;
         box-shadow: 0px 8px 40px 0px rgba(54, 79, 49, 0.16);
+        .page-nav__item:hover {
+            .page-nav__link {
+            
+                color: #344d2f;
+            }
+        }
+        .page-nav__item.active .page-nav__link {
+            color: #344d2f;
+        }
     }
     &__bg--green {
         background-image: url(/img/dest/menu/page-nav__bg--green.png);
     }
     &__menu--terracotta {
-        border: 3px solid #3a5735;
-        background-color: #3a5735;
-        box-shadow: 0px 8px 40px 0px rgba(54, 79, 49, 0.16);
+        border: 3px solid #b95039;
+        background-color: #b95039;
+        box-shadow: 0px 8px 40px 0px rgba(177, 135, 49, 0.16);
+        .page-nav__item:hover {
+            .page-nav__link {
+            
+                color: #b95039
+            }
+        }
+        .page-nav__item.active .page-nav__link {
+            color: #b95039;
+        }
+          
     }
     &__bg--terracotta {
         background-image: url(/img/dest/menu/page-nav__bg--terracotta.png);
@@ -38,9 +57,6 @@
         position: relative;
         transition: all .3s ease-in-out;
         &.active {
-            .page-nav__link {
-                color: #344d2f;
-            }
             &::before {
                 display: none;
                 transition: all .1s ease-in-out;
@@ -71,14 +87,11 @@
             border-bottom-right-radius: 24px;
         }
         &:hover {
-            .page-nav__link {
-                color: #344d2f;
-            }
             &::before {
                 display: none;
                 transition: all .1s ease-in-out;
             }
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, .9);
             transition: all .3s ease-in-out;
         }
     }
@@ -97,15 +110,3 @@
     }
     
 }
-
-.Прямоугольник__скругл__углы_21 {
-    border-radius: 24px;
-    
-    position: absolute;
-    left: 343px;
-    top: 392px;
-    width: 1233px;
-    height: 56px;
-    z-index: 131;
-  }
-  

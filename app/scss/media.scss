@@ -268,6 +268,8 @@
     .footer__item {
         height: auto;
     }
+
+    
 }
 
 @media (max-width: 1399.9px) {
@@ -297,6 +299,30 @@
         right: 35%;
     }
 }
+
+@media (max-width: 1428px) {
+    .blog-card {
+        flex-direction: column;
+        &__image {
+            max-width: 100%;
+            border-top-right-radius: 24px;
+            border-bottom-left-radius: 0;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+        .card {
+            &__content {
+                border-top-right-radius: 0;
+                border-bottom-left-radius: 24px;
+            }
+        }
+    }
+}
+
 
 @media (max-width: 1500px) {
     .repertoire-slide__image {

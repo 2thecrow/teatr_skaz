@@ -6893,14 +6893,26 @@ body {
   -webkit-box-shadow: 0 8px 40px 0 rgba(54,79,49,.16);
   box-shadow: 0 8px 40px 0 rgba(54,79,49,.16)
 }
+.page-nav__menu--green .page-nav__item:hover .page-nav__link {
+  color: #344d2f
+}
+.page-nav__menu--green .page-nav__item.active .page-nav__link {
+  color: #344d2f
+}
 .page-nav__bg--green {
   background-image: url(/img/dest/menu/page-nav__bg--green.png)
 }
 .page-nav__menu--terracotta {
-  border: 3px solid #3a5735;
-  background-color: #3a5735;
-  -webkit-box-shadow: 0 8px 40px 0 rgba(54,79,49,.16);
-  box-shadow: 0 8px 40px 0 rgba(54,79,49,.16)
+  border: 3px solid #b95039;
+  background-color: #b95039;
+  -webkit-box-shadow: 0 8px 40px 0 rgba(177,135,49,.16);
+  box-shadow: 0 8px 40px 0 rgba(177,135,49,.16)
+}
+.page-nav__menu--terracotta .page-nav__item:hover .page-nav__link {
+  color: #b95039
+}
+.page-nav__menu--terracotta .page-nav__item.active .page-nav__link {
+  color: #b95039
 }
 .page-nav__bg--terracotta {
   background-image: url(/img/dest/menu/page-nav__bg--terracotta.png)
@@ -6916,9 +6928,6 @@ body {
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out
-}
-.page-nav__item.active .page-nav__link {
-  color: #344d2f
 }
 .page-nav__item.active::before {
   display: none;
@@ -6950,13 +6959,10 @@ body {
   border-bottom-right-radius: 24px
 }
 .page-nav__item:hover {
-  background-color: #fff;
+  background-color: rgba(255,255,255,.9);
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out
-}
-.page-nav__item:hover .page-nav__link {
-  color: #344d2f
 }
 .page-nav__item:hover::before {
   display: none;
@@ -6983,15 +6989,6 @@ body {
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out
-}
-.Прямоугольник__скругл__углы_21 {
-  border-radius: 24px;
-  position: absolute;
-  left: 343px;
-  top: 392px;
-  width: 1233px;
-  height: 56px;
-  z-index: 131
 }
 .page {
   position: relative;
@@ -7539,6 +7536,61 @@ body {
   height: 175px;
   z-index: 179
 }
+.blog-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 30px 0;
+  text-decoration: none
+}
+.blog-card__image {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 330px;
+  flex: 0 0 330px;
+  max-width: 330px;
+  width: 100%;
+  max-height: 440px;
+  height: 100%;
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+  overflow: hidden
+}
+.blog-card__image img {
+  width: 100%;
+  height: auto;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out
+}
+.blog-card__date {
+  font-size: 13px;
+  line-height: 32px;
+  color: #a4b5bc;
+  padding: 5px 0 10px 0;
+  margin: 0 0 29px 0;
+  border-bottom: 1px solid rgba(191,202,207,.24)
+}
+.blog-card .card__content {
+  border-top-right-radius: 24px;
+  border-bottom-left-radius: 0
+}
+.blog-card .card__title {
+  color: #344d2f;
+  margin: 0 0 15px 0
+}
+.blog-card .card__text {
+  font-size: 16px;
+  line-height: 26px;
+  color: #272827
+}
+.blog-card:hover .blog-card__image img {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out
+}
 @media (max-width:400px) {
   .welcome-slider-container {
     height: 800px
@@ -7800,6 +7852,30 @@ body {
   }
   .timeline-slider .swiper-button-next {
     right: 35%
+  }
+}
+@media (max-width:1428px) {
+  .blog-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+  }
+  .blog-card__image {
+    max-width: 100%;
+    border-top-right-radius: 24px;
+    border-bottom-left-radius: 0;
+    overflow: hidden
+  }
+  .blog-card__image img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover
+  }
+  .blog-card .card__content {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 24px
   }
 }
 @media (max-width:1500px) {
