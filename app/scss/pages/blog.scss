@@ -60,15 +60,56 @@
     max-width: 930px;
     width: 100%;
     background-color: #fff;
-    padding: 40px 20px;
+    padding: 58px 20px;
     margin: 0 auto;
+    border-radius: 24px;
+    &__container {
+        max-width: 690px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    &__lightbox {
+        position: relative;
+        display: flex;
+        height: 220px;
+        border-radius: 24px;
+        overflow: hidden;
+        margin: 0 0 30px 0;
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        &:hover {
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: rgba(25,25,25,.639);
+                background-image: url(/img/dest/pages/gallery-zoom-icon.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 120px 120px;
+                transition: all .3s ease-in-out;
+            }
+        }
+    } 
     &__title {
         font-weight: 900;
         font-size: 24px;
-        line-height: 56px;
+        line-height: 32px;
+        margin: 0 0 30px 0;
+        text-align: center;
     }
     &__text {
         font-size: 16px;
         line-height: 26px;
+        margin: 23px 0 0 0;
+        p {
+            margin-bottom: 23px;
+        }
     }
 }

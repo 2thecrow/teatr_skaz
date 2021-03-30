@@ -344,3 +344,106 @@
         border-bottom: 1px dotted #fac57d;
     }
 }
+
+.share {
+    &__container {
+        padding: 21px 0;
+        margin: 56px 0 0 0;
+        border-top: 2px solid #e5e9ea;
+    }
+    &__title {
+        font-weight: 900;
+    }
+    &__list {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 18px 0 0 0;
+    }
+    &__item {
+        &:not(:last-child) {
+            margin: 0 8px 0 0;
+        }
+    }
+    &__link {
+        display: flex;
+        width: 56px;
+        height: 56px;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+        border: 2px solid #344d2f;
+        transition: all .3s ease-in-out;
+        &:hover {
+            background-color: #344d2f;
+            transition: all .3s ease-in-out;
+        }
+    }
+    &__link--vk {
+        background-image: url(/img/dest/menu/vk-icon__green.png);
+        transition: all .3s ease-in-out;
+        &:hover {
+            background-image: url(/img/dest/menu/vk-icon__colored.png);
+            transition: all .3s ease-in-out;
+        }
+    }
+    &__link--twitter {
+        background-image: url(/img/dest/menu/twitter-icon__green.png);
+        transition: all .3s ease-in-out;
+        &:hover {
+            background-image: url(/img/dest/menu/twitter-icon__colored.png);
+            transition: all .3s ease-in-out;
+        }
+    }
+    &__link--facebook {
+        background-image: url(/img/dest/menu/facebook-icon__green.png);
+        transition: all .3s ease-in-out;
+        &:hover {
+            background-image: url(/img/dest/menu/facebook-icon__colored.png);
+            transition: all .3s ease-in-out;
+        }
+    }
+    &__link--odnoklassniki {
+        background-image: url(/img/dest/menu/odnoklassniki-icon__green.png);
+        transition: all .3s ease-in-out;
+        &:hover {
+            background-image: url(/img/dest/menu/odnoklassniki-icon__colored.png);
+            transition: all .3s ease-in-out;
+        }
+    }
+}
+
+
+.bottom-container {
+    display: flex;
+    justify-content: center;
+    padding: 32px 0;
+}
+.back-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 26px;
+    letter-spacing: 0.024em;
+    color: #a5b6bd;
+    padding: 5px 30px;
+    margin: 0 auto;
+    border: 2px solid #bfcacf;
+    border-radius: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+    &:hover {
+        color: #a5b6bd;
+        background-color: #fff;
+        transition: all .3s ease-in-out;
+    }
+    &__icon {
+        width: 14px;
+        height: 13px;
+        margin: 0 8px 0 0;
+    }
+}
+  
