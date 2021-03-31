@@ -4989,6 +4989,12 @@ progress {
   font-weight: 900;
   src: local("Roboto"),url(../fonts/roboto-900.woff2) format("woff2")
 }
+@font-face {
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 900;
+  src: local("Roboto"),url(../fonts/roboto-900-italic.woff2) format("woff2")
+}
 ::-webkit-input-placeholder {
   color: #666
 }
@@ -5135,7 +5141,7 @@ body {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  letter-spacing: 2px
+  letter-spacing: -.08em
 }
 .section__flex {
   display: -webkit-box;
@@ -5317,6 +5323,50 @@ body {
   color: #344d2f;
   background-color: #fff
 }
+.selection-filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+.selection-filter__text {
+  font-size: 13px;
+  text-transform: uppercase;
+  margin: 0 5px 0 0
+}
+.selection-filter__field {
+  width: 273px
+}
+.selection-filter__select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 273px;
+  flex: 0 0 273px;
+  max-width: 100%;
+  width: 100%;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 24px;
+  color: #344d2f;
+  background-color: #fff;
+  background-image: url(/img/dest/pages/select-arrow.png);
+  background-repeat: no-repeat,repeat;
+  background-position: right top 50%;
+  padding: 4px 33px 4px 13px;
+  margin: 0;
+  background-size: 32px 32px;
+  border-radius: 12px;
+  border: 1px dotted #344d2f
+}
 .newsletter {
   padding: 50px 0 127px 0
 }
@@ -5387,6 +5437,10 @@ body {
   line-height: 24px;
   letter-spacing: .05em;
   margin: 0 0 25px 0
+}
+.newsletter__form {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
 }
 .newsletter__field {
   position: relative;
@@ -7050,6 +7104,24 @@ body {
 .page-nav__bg--terracotta {
   background-image: url(/img/dest/menu/page-nav__bg--terracotta.png)
 }
+.page-nav__menu--cream {
+  border: 3px solid #dcac49;
+  background-color: #dcac49;
+  -webkit-box-shadow: 0 8px 40px 0 rgba(177,135,49,.16);
+  box-shadow: 0 8px 40px 0 rgba(177,135,49,.16)
+}
+.page-nav__menu--cream .page-nav__item:hover .page-nav__link {
+  color: #dcac49
+}
+.page-nav__menu--cream .page-nav__item.active .page-nav__link {
+  color: #dcac49
+}
+.page-nav__menu--cream .page-nav__item:not(:last-child)::before {
+  background-color: #eec268
+}
+.page-nav__bg--cream {
+  background-image: url(/img/dest/menu/page-nav__bg--cream.png)
+}
 .page-nav__item {
   position: relative;
   -webkit-transition: all .3s ease-in-out;
@@ -7122,6 +7194,57 @@ body {
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out
+}
+.page-filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 0 49px 0
+}
+.page-filter__age {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-color: #fff;
+  padding: 8px 12px 8px 18px;
+  margin: 0 0 15px 0;
+  border-radius: 16px
+}
+.page-filter__age .age-filter__link {
+  border: 2px dotted #344d2f
+}
+.page-filter__age .age-filter__link.active {
+  color: #fff;
+  background-color: #344d2f
+}
+.page-filter__age .age-filter__link:hover.active {
+  border: 2px dotted transparent
+}
+.page-filter__selection {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  background-color: #fff;
+  padding: 8px 12px 8px 18px;
+  margin: 0 0 15px 0;
+  border-radius: 16px
+}
+.page-filter__selection-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap
+}
+.page-filter__selection:first-child {
+  margin: 0 25px 15px 0
 }
 .page {
   position: relative;
@@ -7792,6 +7915,87 @@ body {
 .blog-article__text p {
   margin-bottom: 23px
 }
+.repertoire__card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  width: 100%;
+  height: 449px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 41px 70px 41px 41px;
+  margin: 0 0 30px 0;
+  border-radius: 24px;
+  overflow: hidden;
+  text-decoration: none;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out
+}
+.repertoire__card .age-limit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #ba551d;
+  background-color: #fed071;
+  z-index: 2
+}
+.repertoire__card::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0,0,0,.4);
+  z-index: 1
+}
+.repertoire__card:hover::before {
+  background-color: rgba(0,0,0,.6);
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out
+}
+.repertoire__card:hover .repertoire__card-btn {
+  background-color: rgba(255,255,255,.3);
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out
+}
+.repertoire__card-title {
+  font-size: 24px;
+  line-height: 32px;
+  color: #fff;
+  margin: 0 0 31px 0;
+  z-index: 2
+}
+.repertoire__card-btn {
+  font-weight: 900;
+  font-size: 13px;
+  line-height: 21px;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 7px 22px;
+  border-radius: 16px;
+  text-transform: uppercase;
+  z-index: 2;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out
+}
 @media (max-width:400px) {
   .welcome-slider-container {
     height: 800px
@@ -7813,6 +8017,17 @@ body {
 @media (max-width:480px) {
   .welcome-repertoire .age-filter__link {
     width: 60px
+  }
+  .page-filter .age-filter__link {
+    width: 60px
+  }
+  .page-filter__selection:first-child {
+    margin: 0 0 15px 0
+  }
+  .page-filter .selection-filter,
+  .page-filter .selection-filter__field,
+  .page-filter__selection {
+    width: 100%
   }
 }
 @media (max-width:576px) {
@@ -7909,7 +8124,7 @@ body {
   .section__more {
     font-size: 11px
   }
-  .age-filter {
+  .welcome-repertoire .age-filter {
     margin: 10px 0 0 0
   }
   .welcome-projects__card {

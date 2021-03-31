@@ -1,0 +1,69 @@
+.repertoire {
+    &__card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        width: 100%;
+        height: 449px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 41px 70px 41px 41px;
+        margin: 0 0 30px 0;
+        border-radius: 24px;
+        overflow: hidden;
+        text-decoration: none;
+        transition: all .3s ease-in-out;
+        .age-limit {
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: #ba551d;
+            background-color: #fed071;
+            z-index: 2;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, .4);
+            z-index: 1;
+        }
+        &:hover {
+            &::before {
+                background-color: rgba(0, 0, 0, .6);
+                transition: all .3s ease-in-out;
+            }
+            .repertoire__card-btn {
+                background-color: rgba(255, 255, 255, .3);
+                transition: all .3s ease-in-out;
+            }
+        }
+    }
+    &__card-title {
+        font-size: 24px;
+        line-height: 32px;
+        color: #fff;
+        margin: 0 0 31px 0;
+        z-index: 2;
+    }
+    &__card-btn {
+        font-weight: 900;
+        font-size: 13px;
+        line-height: 21px;
+        color: #fff;
+        border: 2px solid #fff;
+        padding: 7px 22px;
+        border-radius: 16px;
+        text-transform: uppercase;
+        z-index: 2;
+        transition: all .3s ease-in-out;
+    }
+    
+}

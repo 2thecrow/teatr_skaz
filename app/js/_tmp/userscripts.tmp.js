@@ -1,20 +1,7 @@
 "use strict";
 
 document.addEventListener('DOMContentLoaded', function () {
-  var documentFilterBtn = document.querySelector('.document-filter__btn');
-  var documentFilter = document.querySelector('.document-filter');
-  documentFilterBtn.addEventListener('click', function () {
-    documentFilterBtn.classList.toggle('active');
-    documentFilter.classList.toggle('active');
-  });
-  /* Сделал по бырому анкор */
-
-  window.scrollBy({
-    top: 100,
-    behavior: 'smooth'
-  });
   /* Hamburher menu */
-
   var menu = document.querySelector('.mobile-menu');
   /* Aside menu */
 
@@ -147,4 +134,13 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   timelinSliderDate.controller.control = timelinSliderContent;
   timelinSliderContent.controller.control = timelinSliderDate;
+  var documentFilterBtn = document.querySelector('.document-filter__btn');
+  var documentFilter = document.querySelector('.document-filter');
+
+  if (documentFilterBtn) {
+    documentFilterBtn.addEventListener('click', function () {
+      documentFilterBtn.classList.toggle('active');
+      documentFilter.classList.toggle('active');
+    });
+  }
 });

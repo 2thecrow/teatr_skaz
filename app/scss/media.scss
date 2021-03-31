@@ -20,11 +20,22 @@
     }
 }
 
-// Small devices (landscape phones, 576px and down)
 @media (max-width: 480px) {
 
     .welcome-repertoire .age-filter__link {
         width: 60px;
+    }
+    .page-filter .age-filter__link {
+        width: 60px;
+    }
+    .page-filter__selection:first-child {
+        margin: 0 0 15px 0;
+    }
+    .page-filter__selection,
+    .page-filter .selection-filter,
+    .page-filter .selection-filter__field
+     {
+        width: 100%;
     }
 }
 
@@ -126,7 +137,7 @@
         font-size: 11px;
     }
 
-    .age-filter {
+    .welcome-repertoire .age-filter {
         margin: 10px 0 0 0;
     }
 

@@ -1,15 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-	const documentFilterBtn = document.querySelector('.document-filter__btn');
-	const documentFilter = document.querySelector('.document-filter');
-	documentFilterBtn.addEventListener('click', () => {
-		documentFilterBtn.classList.toggle('active')
-		documentFilter.classList.toggle('active')
-	})
-
-	/* Сделал по бырому анкор */
-	window.scrollBy({ top: 100, behavior: 'smooth' });
-
 	/* Hamburher menu */
     const menu = document.querySelector('.mobile-menu'); /* Aside menu */
     const burger = document.querySelector('.burger'); /* desktop btn aside menu  */
@@ -48,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     /* End of Hamburher menu */
     
-	const welcomePageSlider = new Swiper('.welcome-slider-container', {
+	let welcomePageSlider = new Swiper('.welcome-slider-container', {
 		// Optional parameters
 		/* loop: true, */
 	  
@@ -63,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		  },
 	});
 	
-	const welcomeRepertoireSlider = new Swiper('.welcome-repertoire__slider', {
+	let welcomeRepertoireSlider = new Swiper('.welcome-repertoire__slider', {
 		// Optional parameters
 		/* loop: true, */
 		slidesPerView: 1,
@@ -106,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	let timelinSliderContent = new Swiper('.timeline-content__slider', {
 		// Optional parameters
-	    spaceBetween: 10,
+		spaceBetween: 10,
 		autoHeight: true,
 		speed: 800,
 	
@@ -116,11 +106,12 @@ document.addEventListener('DOMContentLoaded', () => {
 			prevEl: '.swiper-button-prev',
 		},
 		
-	})
+	});
+
 	let timelinSliderDate = new Swiper('.timeline-slider__dates', {
 		spaceBetween: 70,
-	    centeredSlides: true,
-	    slidesPerView: 'auto',
+		centeredSlides: true,
+		slidesPerView: 'auto',
 		slideToClickedSlide: true,
 		speed: 800,
 
@@ -135,10 +126,20 @@ document.addEventListener('DOMContentLoaded', () => {
 				spaceBetween: 70,
 			}
 		},
-	})
+	});
 	
 	timelinSliderDate.controller.control = timelinSliderContent;
 	timelinSliderContent.controller.control = timelinSliderDate;
+
+	const documentFilterBtn = document.querySelector('.document-filter__btn');
+	const documentFilter = document.querySelector('.document-filter');
+	if (documentFilterBtn) {
+		documentFilterBtn.addEventListener('click', () => {
+			documentFilterBtn.classList.toggle('active')
+			documentFilter.classList.toggle('active')
+		});
+	}
+	
 	
 
 })
