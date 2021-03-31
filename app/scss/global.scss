@@ -3,7 +3,11 @@
     max-width: 1920px;
     margin: 0 auto;
 } 
-
+.t-small-wrapper {
+    position: relative;
+    max-width: 720px;
+    margin: 0 auto;
+}
 .t-container {
     position: relative;
     max-width: 1440px;
@@ -483,4 +487,30 @@
         margin: 0 8px 0 0;
     }
 }
-  
+.see-also {
+    max-width: 1920px;
+    background-color: #fff;
+    margin: 0 auto 60px;
+    &__container {
+        position: relative;
+        max-width: 920px;
+        padding: 49px 0;
+        margin: 0 auto;
+        .section__header {
+            margin: 0 0 30px 0;
+        }
+    }
+    .repertoire-slide {
+        .card__title {
+            color: #344d2f;
+        }
+        &:hover {
+            .card__title {
+                color: #fff;
+            }
+        }
+    }
+    .repertoire-slide__text {
+        color: #344d2f;
+    }
+}

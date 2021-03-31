@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		// If we need pagination
 		pagination: {
 			el: '.swiper-pagination',
-		  },
+		},
 	});
 	
 	let welcomeRepertoireSlider = new Swiper('.welcome-repertoire__slider', {
@@ -130,6 +130,19 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 	timelinSliderDate.controller.control = timelinSliderContent;
 	timelinSliderContent.controller.control = timelinSliderDate;
+
+	let repertoirePageSlider = new Swiper('.repertoire-page-slider', {
+		spaceBetween: 30,
+		// Navigation arrows
+		navigation: {
+		  nextEl: '.swiper-button-next',
+		  prevEl: '.swiper-button-prev',
+		},
+		// If we need pagination
+		pagination: {
+			el: '.swiper-pagination',
+		},
+	});
 
 	const documentFilterBtn = document.querySelector('.document-filter__btn');
 	const documentFilter = document.querySelector('.document-filter');
