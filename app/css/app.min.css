@@ -7082,8 +7082,7 @@ body {
   background-size: cover
 }
 .page-nav .section__title {
-  color: #fff;
-  margin: 0 0 22px 0
+  color: #fff
 }
 .page-nav__container {
   display: -webkit-box;
@@ -7099,7 +7098,7 @@ body {
   display: flex;
   list-style-type: none;
   padding: 0;
-  margin: 0 auto;
+  margin: 22px auto 0;
   border-radius: 24px
 }
 .page-nav__menu--green {
@@ -8240,6 +8239,107 @@ body {
 }
 .repertoire-page .share__container {
   margin: 0
+}
+.page.contacts {
+  padding: 0 0 60px
+}
+.contacts__map {
+  background-image: url(/img/dest/test_layout/contacts-map.png);
+  height: 592px
+}
+.contacts__container {
+  position: relative;
+  max-width: 690px;
+  width: 100%;
+  margin: 0 auto
+}
+.contacts__container.management {
+  padding: 10px 0 20px
+}
+.contacts__description {
+  position: relative;
+  max-width: 928px;
+  width: 100%;
+  background-color: #fff;
+  padding: 60px 20px;
+  margin: -100px auto 42px;
+  border-radius: 24px;
+  -webkit-box-shadow: 0 16px 48px 0 rgba(195,195,195,.24);
+  box-shadow: 0 16px 48px 0 rgba(195,195,195,.24)
+}
+.contacts__icon {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center
+}
+.contacts__icon.contacts__icon--mail {
+  background-color: #f8fafb
+}
+.contacts__icon.contacts__icon--user {
+  background-color: #fff
+}
+.contacts__icon--mail {
+  background-image: url(/img/dest/pages/contacts-mail-icon.png)
+}
+.contacts__icon--user {
+  background-image: url(/img/dest/pages/contacts-user-icon.png)
+}
+.contacts__title {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 36px
+}
+.contacts-desc__heading {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 36px;
+  margin: 0 0 45px 0
+}
+.contacts-desc__title {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 32px
+}
+.contacts-desc__phone {
+  font-size: 20px;
+  line-height: 32px;
+  margin: 0 0 14px 0
+}
+.contacts-desc__phone a {
+  color: #344d2f;
+  text-decoration: none
+}
+.contacts-desc__phone a:hover {
+  text-decoration: underline
+}
+.contacts-desc__schedule {
+  font-size: 16px;
+  line-height: 24px
+}
+.contacts-desc__address {
+  font-size: 20px;
+  line-height: 32px;
+  margin: 0 0 21px 0
+}
+.contacts-desc__mail {
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+.contacts-desc__mail a {
+  color: #344d2f;
+  text-decoration: none
+}
+.contacts-desc__mail a:hover {
+  text-decoration: underline
+}
+.contacts-desc__mail .contacts__icon {
+  margin: 0 16px 0 0
 }
 @media (max-width:400px) {
   .welcome-slider-container {
