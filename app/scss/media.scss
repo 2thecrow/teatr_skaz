@@ -185,11 +185,48 @@
     .main-menu {
         display: none;
     }
-
     .burger {
         display: flex;
     }
-
+    .main-menu {
+        
+        &__list {
+            flex-direction: column;
+            margin: 20px 0 0 0;
+        }
+        &__item {
+            width: 100%;
+            padding: 0 20px;
+            margin: 0 0 5px 0;
+            &.main-menu__dropdown {
+                margin: 0 0 5px 0;
+                padding: 0 20px;
+            }
+        }
+        &__link {
+            font-size: 20px;
+        }
+        &__dropdown {
+            &::before {
+                right: 20px;
+            }
+            &:hover {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+        &__dropdown-content {
+            position: relative;
+            box-shadow: none;
+            background-color: #f8fafb;
+        }
+    }
+    .dropdown-content {
+        &__link {
+            font-size: 18px;
+        }
+    }
     .welcome-slide {
         padding: 0;
     }
@@ -280,7 +317,7 @@
     }
 
     .main-menu__search {
-        margin: 10px 0 0 0;
+        margin: 10px auto 0;
     }
 
     .newsletter__decor {
