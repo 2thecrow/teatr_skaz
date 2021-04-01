@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="ru">
 
 <head>
 
@@ -9,7 +9,9 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="icon" href="/img/favicon.png">
 	<meta property="og:image" content="/images/dest/preview.jpg">
+	<!-- SwiperJS CSS -->
 	<link rel="stylesheet" href="/css/swiper-bundle.css">
+	<!-- All in One CSS -->
 	<link rel="stylesheet" href="/css/app.min.css">
 
 </head>
@@ -18,6 +20,7 @@
 
 	<div class="overlay"></div>
 
+	<!-- Header -->
 	<div class="header">
 		<div class="container-fluid t-container">
 			<div class="row">
@@ -71,16 +74,19 @@
 								МЕНЮ
 							</div>
 						</div>
+						<!-- Mobile menu -->
 						<div class="mobile-menu">
+							<!-- Burger -->
 							<div class="mobile-menu__closebtn">
 								<svg xmlns="http://www.w3.org/2000/svg">
 									<path d="M24 20.188l-8.315-8.209 8.2-8.282L20.188 0l-8.212 8.318L3.666.115 0 3.781l8.321 8.24-8.206 8.313L3.781 24l8.237-8.318 8.285 8.203z"/>
 								</svg>
 							</div>
-							<ul>
-								<li>
-									<a href="">О театре<span><img src="/img/dest/menu/menu-arrow-down.png" alt="Arrow down icon"></span></a>
-									<ul>
+							<!-- List -->
+							<ul class="mobile-nav">
+								<li class="mobile-nav__item">
+									<a class="mobile-nav__link" href="">О театре<span><img src="/img/dest/menu/menu-arrow-down.png" alt="Arrow down icon"></span></a>
+									<ul class="mobile-nav__dropdown">
 										<li>
 											<a href="">История</a>
 										</li>
@@ -253,6 +259,7 @@
 		</div>
 	</div>
 
+	<!-- Welcome Slider -->
 	<section class="welcome-slider t-wrapper">
 		<div class="container-fluid t-wrapper">
 			<div class="row">
@@ -336,16 +343,19 @@
 		</div>
 	</section>
 
+	<!-- Welcome Performance -->
 	<section class="welcome-performances t-wrapper">
 		<div class="container">
 			<!-- Heading -->
 			<div class="row">
 				<div class="section__header">
-					<div class="section__title">Ближайшие спектакли</div>
+					<h2 class="section__title">Ближайшие спектакли</h2>
 					<a class="section__more" href="">Афиша</a>
 				</div>
 			</div>
+			<!-- List -->
 			<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 row-cols-xxl-4">
+				<!-- Item -->
 				<div class="col">
 					<div class="welcome-performances__card">
 						<div class="welcome-performances__background">
@@ -355,7 +365,7 @@
 							0+
 						</div>
 						<div class="welcome-performances__content">
-							<div class="card__title" title="Премьера! Спектакль «Двенадцать месяцев»">Премьера! Спектакль «Двенадцать месяцев»</div>
+							<h3 class="card__title" title="Премьера! Спектакль «Двенадцать месяцев»">Премьера! Спектакль «Двенадцать месяцев»</h3>
 							<div class="welcome-performances__date">
 								<div class="welcome-performances__time">19 декабря 2020</div>
 								<div class="welcome-performances__start">16:00</div>
@@ -368,6 +378,7 @@
 						</div>
 					</div>
 				</div>
+				<!-- Item -->
 				<div class="col">
 					<div class="welcome-performances__card">
 						<div class="welcome-performances__background">
@@ -377,7 +388,7 @@
 							0+
 						</div>
 						<div class="welcome-performances__content">
-							<div class="card__title" title="Премьера! Спектакль «Двенадцать месяцев»">Премьера! Спектакль «Двенадцать месяцев»</div>
+							<h3 class="card__title" title="Премьера! Спектакль «Двенадцать месяцев»">Премьера! Спектакль «Двенадцать месяцев»</h3>
 							<div class="welcome-performances__date">
 								<div class="welcome-performances__time">19 декабря 2020</div>
 								<div class="welcome-performances__start">16:00</div>
@@ -390,6 +401,7 @@
 						</div>
 					</div>
 				</div>
+				<!-- Item -->
 				<div class="col">
 					<div class="welcome-performances__card">
 						<div class="welcome-performances__background">
@@ -399,7 +411,7 @@
 							0+
 						</div>
 						<div class="welcome-performances__content">
-							<div class="card__title" title="Премьера! Спектакль «Сказка о рыбаке и рыбке»">Премьера! Спектакль «Сказка о рыбаке и рыбке»</div>
+							<h3 class="card__title" title="Премьера! Спектакль «Сказка о рыбаке и рыбке»">Премьера! Спектакль «Сказка о рыбаке и рыбке»</h3>
 							<div class="welcome-performances__date">
 								<div class="welcome-performances__time">19 декабря 2020</div>
 								<div class="welcome-performances__start">16:00</div>
@@ -422,6 +434,7 @@
 		</div>
 	</section>
 
+	<!-- Welcome Repertoire -->
 	<section class="welcome-repertoire t-wrapper">
 		<!-- Slider navs -->
 		<div class="repertoire-slider__nav">
@@ -435,7 +448,7 @@
 			<!-- Slider decoration left side-->
 			<img class="repertoire-slider__decor-item repertoire-slider__decor-item--2" src="/img/dest/welcome/welcome-slider-hover.png" alt="Repertoire decor image">
 		</div>
-		<!-- Section decoration -->
+		<!-- Botton tiger decoration -->
 		<div class="welcome-repertoire__decor">
 			<img src="/img/dest/welcome/welcome-repertoire__tiger-decor.png" alt="Repertoire decor image">
 		</div>
@@ -445,7 +458,7 @@
 				<div class="section__header">
 					<div class="section__wrapper">
 						<div class="section__flex">
-							<div class="section__title">Репертуар</div>
+							<h2 class="section__title">Репертуар</h2>
 							<a class="section__more" href="">Весь репертуар</a>
 						</div>
 						<div class="age-filter">
@@ -473,6 +486,7 @@
 				<div class="welcome-repertoire__slider">
 					<div class="swiper-container welcome-repertoire__slider repertoire-slider">
 						<div class="swiper-wrapper">
+							<!-- Slide -->
 							<div class="swiper-slide">
 								<a class="repertoire-slide" href="/">
 									<div class="repertoire-slide__image">
@@ -488,6 +502,7 @@
 									</div>
 								</a>
 							</div>
+							<!-- Slide -->
 							<div class="swiper-slide">
 								<a class="repertoire-slide" href="/">
 									<div class="repertoire-slide__image">
@@ -503,6 +518,7 @@
 									</div>
 								</a>
 							</div>
+							<!-- Slide -->
 							<div class="swiper-slide">
 								<a class="repertoire-slide" href="/">
 									<div class="repertoire-slide__image">
@@ -517,6 +533,7 @@
 									</div>
 								</a>
 							</div>
+							<!-- Slide -->
 							<div class="swiper-slide">
 								<a class="repertoire-slide" href="/">
 									<div class="repertoire-slide__image">
@@ -532,6 +549,7 @@
 									</div>
 								</a>
 							</div>
+							<!-- Slide -->
 							<div class="swiper-slide">
 								<a class="repertoire-slide" href="/">
 									<div class="repertoire-slide__image">
@@ -548,6 +566,7 @@
 									</div>
 								</a>
 							</div>
+							<!-- Slide -->
 							<div class="swiper-slide">
 								<a class="repertoire-slide" href="/">
 									<div class="repertoire-slide__image">
@@ -562,6 +581,7 @@
 									</div>
 								</a>
 							</div>
+							<!-- Slide -->
 							<div class="swiper-slide">
 								<a class="repertoire-slide" href="/">
 									<div class="repertoire-slide__image">
@@ -585,19 +605,23 @@
 				</div>
 			</div>
 			<div class="row">
+				<!-- List -->
 				<ul class="welcome-repertoire__nav">
+					<!-- Item -->
 					<li>
 						<a class="welcome-repertoire__nav-link welcome-repertoire__nav-link--repertoire" href="/">
 							<img src="/img/src/welcome/repertoire-btn-icon.png" alt="Repertoire btn icon">
 							Спектакли
 						</a>
 					</li>
+					<!-- Item -->
 					<li>
 						<a class="welcome-repertoire__nav-link welcome-repertoire__nav-link--afisha" href="/">
 							<img src="/img/src/welcome/afisha-btn-icon.png" alt="Afisha btn icon">
 							Афиша
 						</a>
 					</li>
+					<!-- Item -->
 					<li>
 						<a class="welcome-repertoire__nav-link welcome-repertoire__nav-link--cinema" href="/">
 							<img src="/img/src/welcome/cinema-btn-icon.png" alt="Cinema btn icon">
@@ -609,11 +633,12 @@
 		</div>
 	</section>
 
+	<!-- Welcome Last News -->
 	<section class="welcome-last-news t-wrapper">
 		<div class="container">
 			<div class="row">
 				<div class="section__header">
-					<div class="section__title">Последние материалы</div>
+					<h2 class="section__title">Последние материалы</h2>
 					<a class="section__more" href="">Все записи</a>
 				</div>
 			</div>
@@ -694,15 +719,19 @@
 		</div>
 	</section>
 
+	<!-- Welcome Projects -->
 	<section class="welcome-projects t-wrapper">
 		<div class="container">
+			<!-- Heading -->
 			<div class="row">
 				<div class="section__header">
-					<div class="section__title">Наши проекты</div>
+					<h2 class="section__title">Наши проекты</h2>
 					<a class="section__more" href="">Все проекты</a>
 				</div>
 			</div>
+			<!-- List: 1 big, 2 normal-->
 			<div class="row">
+				<!-- Big Item -->
 				<div class="col-md-6 col-lg-6 col-xl-6">
 					<a class="welcome-projects__card" href="/" style="background-image: url(/img/dest/test_layout/welcome-big-project__bg.png);">
 						<div class="welcome-projects__card-content">
@@ -712,6 +741,7 @@
 						</div>
 					</a>
 				</div>
+				<!-- Item -->
 				<div class="col-md-6 col-lg-6 col-xl-3">
 					<a class="card" href="/">
 						<div class="card__image">
@@ -723,6 +753,7 @@
 						</div>
 					</a>
 				</div>
+				<!-- Item -->
 				<div class="col-md-6 col-lg-6 col-xl-3">
 					<a class="card" href="/">
 						<div class="card__image">
@@ -738,9 +769,11 @@
 		</div>
 	</section>
 
+	<!-- Newsletter block -->
 	<div class="newsletter t-wrapper">
 		<div class="container">
 			<div class="row">
+				<!-- Form item-->
 				<div class="col-lg-6 col-xl-6">
 					<div class="newsletter__item newsletter__item-form newsletter__bg">
 						<div class="newsletter__title">Узнавайте новости</div>
@@ -759,6 +792,7 @@
 						</div>
 					</div>
 				</div>
+				<!-- Link item-->
 				<div class="col-lg-6 col-xl-6">
 					<a href="/" class="newsletter__item newsletter__link">
 						<div class="newsletter__link-container">
@@ -783,6 +817,7 @@
 		</div>
 	</div>
 	
+	<!-- Footer -->
 	<div class="footer t-wrapper">
 		<div class="container">
 			<div class="row">
@@ -866,8 +901,11 @@
 		</div>
 	</div>
 
+	<!-- SwiperJS -->
 	<script src="/js/swiper-bundle.js"></script>
+	<!-- LightBox -->
 	<script src="/js/fslightbox/fslightbox.js"></script>
+	<!-- MainJS -->
 	<script src="/js/app.min.js"></script>
 
 </body>

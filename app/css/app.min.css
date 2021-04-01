@@ -5030,6 +5030,14 @@ input:required:valid,
 textarea:required:valid {
   border-color: green
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0
+}
 body {
   font-family: Roboto,-apple-system,BlinkMacSystemFont,sans-serif,Arial;
   font-size: 16px;
@@ -5180,6 +5188,7 @@ body {
 }
 .section__title {
   font-family: FranxurterTotallyFat;
+  font-weight: 400;
   font-size: 48px;
   line-height: 64px
 }
@@ -8289,7 +8298,13 @@ body {
 .contacts__title {
   font-weight: 900;
   font-size: 24px;
-  line-height: 36px
+  line-height: 36px;
+  margin: 0 0 31px 0
+}
+.contacts__note {
+  padding: 25px 0;
+  margin: 50px 0;
+  border-top: 2px solid #e5e9ea
 }
 .contacts-desc__heading {
   font-weight: 900;
@@ -8340,6 +8355,41 @@ body {
 }
 .contacts-desc__mail .contacts__icon {
   margin: 0 16px 0 0
+}
+.management__card {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 21px 16px;
+  border-radius: 24px;
+  margin: 0 0 15px 0
+}
+.management__card .contacts__icon {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 33px;
+  flex: 0 0 33px;
+  margin: 7px 15px 0 0
+}
+.management__card:hover {
+  background-color: #fff
+}
+.management__name {
+  font-weight: 900;
+  line-height: 24px
+}
+.management__position {
+  line-height: 24px
+}
+.management__phone {
+  line-height: 32px
+}
+.management__phone a {
+  color: #344d2f;
+  text-decoration: none
+}
+.management__phone a:hover {
+  text-decoration: underline
 }
 @media (max-width:400px) {
   .welcome-slider-container {
